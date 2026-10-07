@@ -363,7 +363,7 @@
         .article-card:hover {
             transform: translateY(-6px);
             border-color: var(--border-gold);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .article-img-wrap {
@@ -561,16 +561,16 @@
             outline: none;
         }
 
-        /* Modal Overlay */
+        /* Modal Overlays */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(10px);
+            z-index: 3000;
             display: none;
             align-items: center;
             justify-content: center;
@@ -587,6 +587,7 @@
             overflow-y: auto;
             position: relative;
             padding: 36px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8);
         }
 
         .close-btn {
@@ -664,6 +665,7 @@
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.88rem;
+            cursor: pointer;
         }
 
         .footer-links ul li a:hover {
@@ -933,6 +935,51 @@
         </div>
     </div>
 
+    <!-- ==============================================
+         LEGAL PRIVACY POLICY MODAL (UPDATED 2026)
+    ============================================== -->
+    <div class="modal-overlay" id="privacyPolicyModal">
+        <div class="modal-card" style="max-width: 750px;">
+            <button class="close-btn" onclick="closePrivacyModal()">&times;</button>
+            
+            <span class="badge badge-gold">Legal Document</span>
+            <h2 style="font-family: var(--font-heading); font-size: 2rem; margin: 10px 0 6px; color: #fff;">Privacy Policy</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                <strong>Last Updated:</strong> October 07, 2026
+            </p>
+
+            <div style="font-size: 0.95rem; line-height: 1.8; color: #d1d5db;">
+                <p>Welcome to <strong>PinnacleHome</strong>. We are committed to protecting your personal privacy and providing a secure online browsing experience across our luxury architecture and home improvement publication.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">1. Information We Collect</h3>
+                <p>When you subscribe to our newsletter or contact us via email, we may collect your name, email address (<code>smarthomep123@gmail.com</code> inquiries), and any feedback you submit voluntarily.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">2. How We Use Your Information</h3>
+                <p>We use collected data solely to respond to your home renovation inquiries, deliver curated home design newsletters, and enhance overall website performance and user experience.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">3. Cookies & Analytical Data</h3>
+                <p>We may use standard web cookies to analyze site traffic, monitor popular article trends, and understand audience demographics to improve our design editorial content.</p>
+
+                <!-- PRIVACY POLICY UPDATES SECTION -->
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">4. Privacy Policy Updates</h3>
+                <p style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 14px; border-radius: 4px; color: #f3f4f6;">
+                    We may update this Privacy Policy from time to time to reflect changes to our website, services, or applicable laws. Any changes will be posted on this page with an updated “Last Updated” date. We encourage visitors to review this Privacy Policy periodically.
+                </p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">5. Contact Information</h3>
+                <p>If you have any questions, privacy concerns, or data requests regarding this policy, please reach us directly at:</p>
+                <p style="margin-top: 8px;">
+                    <i class="fa-solid fa-envelope text-gold"></i> 
+                    <strong>Email:</strong> <a href="mailto:smarthomep123@gmail.com" style="color: var(--gold-primary); text-decoration: underline; margin-left: 6px;">smarthomep123@gmail.com</a>
+                </p>
+            </div>
+
+            <div style="margin-top: 25px; text-align: center;">
+                <button onclick="closePrivacyModal()" class="btn-calculate" style="max-width: 200px; padding: 10px 20px;">I Understand</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -971,8 +1018,8 @@
                 <ul>
                     <li><a href="#about-contact">About Our Team</a></li>
                     <li><a href="#about-contact">Contact via Gmail</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPrivacyModal()" style="color: var(--gold-primary); font-weight: bold;">Privacy Policy</a></li>
                     <li><a href="#about-contact">Brand Collaborations</a></li>
-                    <li><a href="#about-contact">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
@@ -1202,9 +1249,22 @@
             document.getElementById("articleModal").style.display = "none";
         }
 
+        /* Privacy Policy Modal */
+        function openPrivacyModal() {
+            const modal = document.getElementById("privacyPolicyModal");
+            if (modal) modal.style.display = "flex";
+        }
+
+        function closePrivacyModal() {
+            const modal = document.getElementById("privacyPolicyModal");
+            if (modal) modal.style.display = "none";
+        }
+
         window.addEventListener("click", (e) => {
-            const modal = document.getElementById("articleModal");
-            if (e.target === modal) modal.style.display = "none";
+            const aModal = document.getElementById("articleModal");
+            const pModal = document.getElementById("privacyPolicyModal");
+            if (e.target === aModal) aModal.style.display = "none";
+            if (e.target === pModal) pModal.style.display = "none";
         });
 
         function calculateROI() {
