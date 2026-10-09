@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- High Traffic SEO Meta Tags -->
-    <title>PinnacleHome | Home Improvement Ideas & AI Renovation Assistant</title>
-    <meta name="description" content="Discover 10 transformative home improvement ideas, smart home upgrades, and generate custom design plans with our Gemini AI Renovation Assistant.">
-    <meta name="keywords" content="Home Improvement Ideas, smart home upgrades, AI renovation assistant, budget kitchen remodel, modern renovation 2026">
+    <title>PinnacleHome | Luxury Home Improvement, Interior Design & Smart Living</title>
+    <meta name="description" content="Expert home improvement guides, small living room ideas, smart home upgrades, and high-ROI renovation blueprints.">
+    <meta name="keywords" content="Home Improvement Ideas, Small Living Room Ideas, smart home upgrades, budget kitchen remodel, modern renovation 2026">
     <meta name="robots" content="index, follow">
     <meta name="author" content="PinnacleHome Editorial">
 
@@ -59,10 +59,6 @@
             width: 92%;
             max-width: 1320px;
             margin: 0 auto;
-        }
-
-        .text-gold {
-            color: var(--gold-primary);
         }
 
         .badge {
@@ -275,6 +271,8 @@
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            text-decoration: none;
+            color: #fff;
         }
 
         .side-card:hover {
@@ -286,6 +284,7 @@
             font-family: var(--font-heading);
             font-size: 1.2rem;
             margin: 8px 0;
+            color: #fff;
         }
 
         .side-card p {
@@ -312,23 +311,35 @@
             margin: 4px 0 24px;
         }
 
-        /* Full Featured Article Card */
-        .featured-article-card {
+        /* Article Boxes Grid */
+        .articles-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .article-card-box {
             background: var(--bg-card);
             border-radius: var(--radius-md);
             overflow: hidden;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .featured-article-card:hover {
+        .article-card-box:hover {
+            transform: translateY(-6px);
             border-color: var(--border-gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .article-img-wrap {
             position: relative;
-            height: 380px;
+            height: 220px;
             overflow: hidden;
         }
 
@@ -339,84 +350,69 @@
             transition: transform 0.6s ease;
         }
 
+        .article-card-box:hover .article-img-wrap img {
+            transform: scale(1.08);
+        }
+
         .article-category {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 14px;
+            left: 14px;
         }
 
-        .article-body-content {
-            padding: 36px;
-        }
-
-        .article-body-content h1 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            line-height: 1.35;
-            margin-bottom: 16px;
-            color: #fff;
-        }
-
-        .article-body-content .post-meta {
+        .article-body {
+            padding: 22px;
             display: flex;
-            gap: 16px;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 25px;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
-        .article-text {
-            color: #e2e8f0;
-            font-size: 1.02rem;
-            line-height: 1.8;
-        }
-
-        .article-text p {
-            margin-bottom: 20px;
-        }
-
-        .article-text h3 {
+        .article-body h3 {
             font-family: var(--font-heading);
-            color: var(--gold-primary);
-            font-size: 1.35rem;
-            margin: 32px 0 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .article-text ul {
-            margin: 12px 0 24px 24px;
-        }
-
-        .article-text li {
+            font-size: 1.25rem;
+            line-height: 1.4;
             margin-bottom: 10px;
-            color: #cbd5e1;
-        }
-
-        .article-text li strong {
             color: #fff;
+            transition: var(--transition);
         }
 
-        .pro-callout {
-            background: rgba(212, 175, 55, 0.08);
-            border-left: 3px solid var(--gold-primary);
-            padding: 18px 22px;
-            border-radius: var(--radius-sm);
-            margin: 30px 0;
-            color: #f3f4f6;
+        .article-card-box:hover .article-body h3 {
+            color: var(--gold-primary);
         }
 
-        /* AI GENERATOR WIDGET STYLES */
+        .article-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 14px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .btn-read-more {
+            color: var(--gold-primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* AI WIDGET STYLES */
         .ai-widget {
             background: linear-gradient(145deg, #14161d, #1c1f2a);
             border: 1px solid var(--border-gold);
             border-radius: var(--radius-md);
             padding: 26px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
         }
 
         .ai-badge {
@@ -432,13 +428,6 @@
             margin-bottom: 8px;
         }
 
-        .ai-input-box {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
         .ai-textarea {
             width: 100%;
             background: #08090b;
@@ -448,9 +437,9 @@
             color: #fff;
             font-family: var(--font-sans);
             font-size: 0.9rem;
-            resize: vertical;
             min-height: 70px;
             outline: none;
+            margin: 10px 0;
             transition: var(--transition);
         }
 
@@ -459,6 +448,7 @@
         }
 
         .btn-ai-generate {
+            width: 100%;
             background: linear-gradient(90deg, #d4af37, #e5c158);
             color: #000;
             border: none;
@@ -480,23 +470,17 @@
         }
 
         .ai-result-card {
-            margin-top: 18px;
+            margin-top: 16px;
             background: #08090b;
             border: 1px solid var(--border-color);
             border-radius: var(--radius-sm);
-            padding: 16px;
+            padding: 14px;
             display: none;
-            max-height: 350px;
+            max-height: 300px;
             overflow-y: auto;
             color: #e2e8f0;
             font-size: 0.88rem;
             line-height: 1.6;
-        }
-
-        .ai-result-card h4 {
-            color: var(--gold-primary);
-            font-family: var(--font-heading);
-            margin-bottom: 8px;
         }
 
         /* Sidebar Widgets */
@@ -555,8 +539,7 @@
             outline: none;
         }
 
-        .btn-calculate,
-        .btn-gold-block {
+        .btn-calculate {
             width: 100%;
             background: var(--gold-primary);
             color: #000;
@@ -569,8 +552,7 @@
             transition: var(--transition);
         }
 
-        .btn-calculate:hover,
-        .btn-gold-block:hover {
+        .btn-calculate:hover {
             background: var(--gold-hover);
         }
 
@@ -630,7 +612,6 @@
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.88rem;
-            cursor: pointer;
         }
 
         .footer-links ul li a:hover {
@@ -649,14 +630,17 @@
             .hero-grid, .layout-with-sidebar, .footer-grid {
                 grid-template-columns: 1fr;
             }
-            .article-img-wrap { height: 260px; }
-            .about-grid-box { grid-template-columns: 1fr !important; }
+            .articles-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-grid-box {
+                grid-template-columns: 1fr !important;
+            }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero-title { font-size: 1.6rem; }
-            .article-body-content { padding: 22px; }
         }
     </style>
 </head>
@@ -665,7 +649,7 @@
     <!-- Top Announcement Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <span><i class="fa-solid fa-bolt text-gold"></i> <strong>Trending 2026:</strong> 10 High-ROI Home Improvement Ideas + AI Renovation Assistant</span>
+            <span><i class="fa-solid fa-bolt" style="color: var(--gold-primary);"></i> <strong>Trending 2026:</strong> Modern Home Renovation &amp; Smart Living Guides</span>
             <div class="top-socials">
                 <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -677,23 +661,23 @@
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-gold">PINNACLE</span>HOME
                 <small>ESTATE &amp; IMPROVEMENT</small>
             </a>
 
             <nav class="nav-links">
-                <a href="#featured" class="active">Featured</a>
+                <a href="/" class="active">Featured</a>
                 <a href="home-improvement-ideas.html">Home Improvement Ideas</a>
-                <a href="#ai-assistant" style="color: #e5c158; font-weight: 700;">✨ AI Assistant</a>
+                <a href="small-living-room-ideas.html">Small Living Room Ideas</a>
                 <a href="#tools">Cost Calculator</a>
-                <a href="#about-our-team">About Our Team</a>
+                <a href="#about-our-team" style="color: var(--gold-primary); font-weight: 700;">About Our Team</a>
             </nav>
 
             <div class="nav-actions">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchInput" placeholder="Search improvement ideas...">
+                    <input type="text" id="searchInput" placeholder="Search ideas...">
                 </div>
                 <button class="btn-subscribe" onclick="alert('Welcome to PinnacleHome VIP Digest!')">Subscribe</button>
             </div>
@@ -703,29 +687,22 @@
     <!-- Hero / Featured Section -->
     <section class="hero" id="featured">
         <div class="container hero-grid">
-            <div class="hero-main" style="background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');" onclick="document.getElementById('article-main').scrollIntoView({behavior: 'smooth'})">
+            <div class="hero-main" style="background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');" onclick="window.location.href='home-improvement-ideas.html'">
                 <span class="badge badge-gold">Cover Story • 2026 Blueprint</span>
                 <h1 class="hero-title">10 Transformative Home Improvement Ideas for Modern Living</h1>
-                <p class="hero-desc">Elevate your daily convenience, slash utility bills, and maximize property value with these proven high-ROI home renovation and smart automation ideas.</p>
+                <p class="hero-desc">Elevate your daily convenience, slash utility bills, and maximize property value with these proven high-ROI home renovation ideas.</p>
                 <div class="meta-info">
                     <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
-                    <span><i class="fa-regular fa-user"></i> By Pinnacle Editorial</span>
-                    <span><i class="fa-solid fa-fire text-gold"></i> 52.8K Views</span>
+                    <span style="color: var(--gold-primary); font-weight: 700;">Read Full Guide →</span>
                 </div>
             </div>
 
             <div class="hero-side">
-                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80');">
-                    <span class="badge">Kitchen Renovation</span>
-                    <h3>Modern Kitchen Refresh</h3>
-                    <p>Matte cabinet refinishing, brushed brass hardware, and under-cabinet LED task lights.</p>
-                </div>
-
-                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80');">
-                    <span class="badge">Smart Living</span>
-                    <h3>Smart Automation &amp; Security</h3>
-                    <p>AI thermostats, automated lighting schedules, and biometric keyless access.</p>
-                </div>
+                <a href="small-living-room-ideas.html" class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80');">
+                    <span class="badge badge-gold">Interior Trend</span>
+                    <h3>12 Brilliant Small Living Room Ideas</h3>
+                    <p>Optical height tricks, multi-functional furniture, and layout secrets for compact spaces.</p>
+                </a>
             </div>
         </div>
     </section>
@@ -734,158 +711,67 @@
     <main class="main-content" id="articles">
         <div class="container layout-with-sidebar">
             
-            <!-- Left: Main Complete Article -->
-            <div class="articles-area" id="article-main">
+            <!-- Left: ALL ARTICLES BOXES GRID -->
+            <div class="articles-area">
                 <div class="section-heading">
-                    <h2>Featured Home Improvement Guide</h2>
-                    <p class="subtitle">A comprehensive blueprint for stylish, value-boosting home transformations.</p>
+                    <h2>Trending Home Improvement Guides</h2>
+                    <p class="subtitle">Click on any guide box to read the full comprehensive article.</p>
                 </div>
 
-                <article class="featured-article-card">
-                    <div class="article-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80" alt="10 Transformative Home Improvement Ideas">
-                        <span class="badge badge-gold article-category">Home Improvement Ideas</span>
-                    </div>
+                <!-- 2 Columns Grid of Article Boxes -->
+                <div class="articles-cards-grid">
 
-                    <div class="article-body-content">
-                        <h1>10 Transformative Home Improvement Ideas for a Smarter, Modern Living Space</h1>
-                        
-                        <div class="post-meta">
-                            <span><i class="fa-regular fa-calendar"></i> October 2026</span>
-                            <span>•</span>
-                            <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
-                            <span>•</span>
-                            <span><i class="fa-solid fa-tag text-gold"></i> High-ROI Renovation</span>
+                    <!-- 📦 BOX 1: Home Improvement Ideas -->
+                    <a href="home-improvement-ideas.html" class="article-card-box">
+                        <div class="article-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Home Improvement Ideas">
+                            <span class="badge badge-gold article-category">Smart Living</span>
                         </div>
-
-                        <div class="article-text">
-                            <p>
-                                Upgrading your home doesn’t always require a complete overhaul or an overwhelming budget. Whether you want to boost your property's resale value, cut down on monthly utility bills, or simply create a cozier and more functional environment, making strategic home improvements is the smart way forward.
-                            </p>
-                            <p>
-                                In today’s fast-paced world, blending <strong>modern aesthetic upgrades</strong> with <strong>smart home technology</strong> gives you the best of both worlds: elevated lifestyle aesthetics and effortless daily convenience. Here are the top 10 impactful home improvement ideas to transform your living space.
-                            </p>
-
-                            <h3>1. Upgrade to Smart Lighting &amp; Automated Controls</h3>
-                            <p>
-                                Lighting sets the tone for your entire home. Replacing traditional switches with smart light switches and automated LED bulbs is one of the quickest, highest-impact upgrades you can make.
-                            </p>
-                            <ul>
-                                <li><strong>Automated Schedules:</strong> Program lights to turn on gently at sunset and turn off when you leave the room.</li>
-                                <li><strong>Voice &amp; App Controls:</strong> Adjust brightness and color ambiance effortlessly with Alexa or Google Assistant.</li>
-                            </ul>
-
-                            <div class="pro-callout">
-                                💡 <strong>Pro Tip:</strong> Install motion-sensor smart switches in staircases, hallways, and closets to ensure energy is never wasted.
+                        <div class="article-body">
+                            <h3>10 Transformative Home Improvement Ideas for Modern Living</h3>
+                            <p>From smart automated lighting to high-ROI budget kitchen makeovers, discover 10 proven upgrades to transform your home.</p>
+                            <div class="article-footer">
+                                <span>⏱️ 6 Min Read</span>
+                                <span class="btn-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></span>
                             </div>
-
-                            <h3>2. Install a Smart Thermostat for Maximum Energy Efficiency</h3>
-                            <p>
-                                Heating and cooling make up a massive chunk of household energy expenses. A smart thermostat learns your daily routine, adjusts temperatures when you're away, and optimizes comfort while you're asleep.
-                            </p>
-                            <ul>
-                                <li>Save between <strong>15% to 20%</strong> on annual heating and cooling bills.</li>
-                                <li>Control your climate remotely from your smartphone before arriving home.</li>
-                            </ul>
-
-                            <h3>3. Revitalize the Heart of the Home: Quick Kitchen Makeover</h3>
-                            <p>
-                                Kitchen remodels consistently yield one of the highest Returns on Investment (ROI). You don’t need to replace all your cabinetry to make a dramatic difference:
-                            </p>
-                            <ul>
-                                <li><strong>Paint or Refinish Cabinets:</strong> Modern shades like matte charcoal, sage green, or warm off-white breathe instant life into an outdated kitchen.</li>
-                                <li><strong>Upgrade Hardware:</strong> Swap old knobs for brushed brass or matte black fixtures.</li>
-                                <li><strong>Under-Cabinet LED Strips:</strong> Creates a warm ambient glow while doubling as task lighting for food preparation.</li>
-                            </ul>
-
-                            <h3>4. Elevate Home Security with Smart Access &amp; Monitoring</h3>
-                            <p>
-                                Peace of mind is the ultimate luxury. Modern smart security systems are wireless, easy to install, and provide 24/7 visibility over your property:
-                            </p>
-                            <ul>
-                                <li><strong>Video Doorbells:</strong> Answer deliveries and see guests from anywhere in the world.</li>
-                                <li><strong>Smart Deadbolts:</strong> Keyless access using fingerprint biometric scanners, PIN codes, or proximity auto-unlock.</li>
-                            </ul>
-
-                            <h3>5. Embrace an Open Concept &amp; Multi-Functional Spaces</h3>
-                            <p>
-                                Modern living values open airflow and multifunctional rooms. Convert an unused closet or corner into an ergonomic "Cloffice" (closet office) with floating shelving and integrated cable management.
-                            </p>
-
-                            <h3>6. Refresh Your Bathroom with Spa-Like Touches</h3>
-                            <p>
-                                Transform your daily routine into a boutique hotel retreat with affordable bathroom updates:
-                            </p>
-                            <ul>
-                                <li>Install a high-pressure rainfall showerhead for instant luxury.</li>
-                                <li>Add smart anti-fog backlit LED mirrors.</li>
-                                <li>Switch to touchless, water-saving faucets.</li>
-                            </ul>
-
-                            <h3>7. Enhance Curb Appeal &amp; Outdoor Living</h3>
-                            <p>
-                                First impressions start at the curb. Paint your front door with a bold modern accent color, install solar landscape pathway lighting, and add smart weather-adaptive garden sprinklers.
-                            </p>
-
-                            <h3>8. Maximize Storage with Built-In &amp; Vertical Organizers</h3>
-                            <p>
-                                Clutter is the enemy of a peaceful home. Floating wall shelves, pull-out pantry organizers, and entryway benches with hidden storage create the illusion of a much larger space.
-                            </p>
-
-                            <h3>9. Upgrade Windows, Insulation &amp; Motorized Treatments</h3>
-                            <p>
-                                Smart motorized blinds scheduled to close during peak afternoon sun preserve indoor temperatures naturally and keep cooling costs low.
-                            </p>
-
-                            <h3>10. Introduce Indoor Greenery &amp; Biophilic Design</h3>
-                            <p>
-                                Bring nature indoors with air-purifying plants like Snake Plants, Monstera, and Peace Lilies paired with self-watering smart planters.
-                            </p>
                         </div>
-                    </div>
-                </article><!-- NAYA 2nd ARTICLE CARD -->
-<div style="background: #1c1f2a; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; margin-top: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Small Living Room Ideas" style="width: 100%; height: 260px; object-fit: cover;">
-    
-    <div style="padding: 26px;">
-        <span style="background: #d4af37; color: #000; font-weight: 800; font-size: 11px; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">
-            INTERIOR DESIGN
-        </span>
-        
-        <h2 style="color: #fff; font-size: 22px; font-family: 'Cinzel', serif; margin: 12px 0;">
-            12 Brilliant Small Living Room Ideas to Maximize Space &amp; Style
-        </h2>
-        
-        <p style="color: #9ca3af; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-            Discover clever furniture layouts, visual height tricks, and space-saving tips to make any compact living room look expansive and luxurious.
-        </p>
-        
-        <a href="small-living-room-ideas.html" style="background: #d4af37; color: #000; font-weight: 700; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 14px;">
-            Read Full Article →
-        </a>
-    </div>
-</div>
+                    </a>
+
+                    <!-- 📦 BOX 2: Small Living Room Ideas -->
+                    <a href="small-living-room-ideas.html" class="article-card-box">
+                        <div class="article-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Small Living Room Ideas">
+                            <span class="badge badge-gold article-category">Interior Design</span>
+                        </div>
+                        <div class="article-body">
+                            <h3>12 Brilliant Small Living Room Ideas to Maximize Space &amp; Style</h3>
+                            <p>Discover clever furniture layouts, visual height tricks, and space-saving tips to make any compact living room look expansive.</p>
+                            <div class="article-footer">
+                                <span>⏱️ 7 Min Read</span>
+                                <span class="btn-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
 
             <!-- Right Sidebar: Widgets -->
             <aside class="sidebar">
                 
-                <!-- ✨ GEMINI AI RENOVATION & ARTICLE GENERATOR WIDGET ✨ -->
+                <!-- ✨ GEMINI AI ASSISTANT WIDGET ✨ -->
                 <div class="sidebar-widget ai-widget" id="ai-assistant">
                     <span class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Powered by Gemini AI</span>
                     <div class="widget-header">
-                        <h3>AI Renovation Assistant</h3>
+                        <h3 style="color: #fff;">AI Renovation Assistant</h3>
                     </div>
-                    <p style="font-size: 0.85rem; color: var(--text-muted);">Ask for custom design ideas, cost estimates, or generate a tailored home improvement plan:</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Ask for custom design ideas or generate a tailored renovation plan:</p>
                     
-                    <div class="ai-input-box">
-                        <textarea id="aiPromptInput" class="ai-textarea" placeholder="e.g. Give me 3 budget ideas to makeover a small living room with LED lights..."></textarea>
-                        <button class="btn-ai-generate" id="btnGenerateAI" onclick="handleGenerateAI()">
-                            <i class="fa-solid fa-sparkles"></i> Generate with Gemini
-                        </button>
-                    </div>
+                    <textarea id="aiPromptInput" class="ai-textarea" placeholder="e.g. Give me 3 budget ideas to makeover a small room..."></textarea>
+                    <button class="btn-ai-generate" id="btnGenerateAI" onclick="handleGenerateAI()">
+                        <i class="fa-solid fa-sparkles"></i> Generate with Gemini
+                    </button>
 
-                    <!-- AI Response Area -->
                     <div class="ai-result-card" id="aiResultBox">
                         <div id="aiResultText"></div>
                     </div>
@@ -894,7 +780,7 @@
                 <!-- Quick ROI Estimator Widget -->
                 <div class="sidebar-widget calculator-widget" id="tools">
                     <div class="widget-header">
-                        <i class="fa-solid fa-calculator text-gold"></i>
+                        <i class="fa-solid fa-calculator" style="color: var(--gold-primary);"></i>
                         <h3>Renovation ROI Calculator</h3>
                     </div>
                     <p>Estimate how much value your renovation project adds to your property.</p>
@@ -939,11 +825,11 @@
                     </h2>
                     
                     <p style="color: #e2e8f0; font-size: 1.02rem; line-height: 1.75; margin-bottom: 16px;">
-                        At <strong>PinnacleHome</strong>, our team is passionate about modern home improvement, interior design, architecture, and smart living.
+                        At <strong>PinnacleHome</strong>, our team is passionate about modern home improvement, interior design, architecture, and smart living. We bring together creative ideas and practical knowledge.
                     </p>
 
                     <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
-                        We believe a great home should be comfortable, functional, and designed around the way you live.
+                        We believe a great home is comfortable, functional, and designed around the way you live.
                     </p>
                 </div>
 
@@ -953,12 +839,12 @@
                         Work With Us / Inquiries
                     </h3>
                     <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 22px;">
-                        Have an inquiry or proposal? Email us directly:
+                        Have a design consultation inquiry, sponsorship proposal, or general question? Email us directly:
                     </p>
 
                     <div style="background: #0d0e12; border: 1px dashed var(--gold-primary); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 20px;">
                         <a href="mailto:smarthomep123@gmail.com" style="color: #fff; font-size: 1.05rem; font-weight: 700; text-decoration: none;">
-                            smarthomep123@gmail.com
+                            <i class="fa-solid fa-envelope" style="color: var(--gold-primary); margin-right: 8px;"></i> smarthomep123@gmail.com
                         </a>
                     </div>
                 </div>
@@ -974,22 +860,21 @@
                 <a href="#" class="logo">
                     <span class="logo-gold">PINNACLE</span>HOME
                 </a>
-                <p>The premier luxury magazine and resource for modern architecture, home improvement, and smart home innovations.</p>
+                <p>The premier luxury magazine and resource for modern architecture, home improvement, and interior decor.</p>
             </div>
 
             <div class="footer-links">
                 <h4>Topics</h4>
                 <ul>
-                    <li><a href="#article-main">Smart Home Tech</a></li>
-                    <li><a href="#article-main">Kitchen Remodel</a></li>
-                    <li><a href="#article-main">Energy Savings</a></li>
+                    <li><a href="home-improvement-ideas.html">Home Improvement Ideas</a></li>
+                    <li><a href="small-living-room-ideas.html">Small Living Room Ideas</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
                 <h4>Tools</h4>
                 <ul>
-                    <li><a href="#ai-assistant">AI Renovation Tool</a></li>
+                    <li><a href="#ai-assistant">AI Renovation Assistant</a></li>
                     <li><a href="#tools">ROI Calculator</a></li>
                 </ul>
             </div>
@@ -1009,10 +894,8 @@
 
     <!-- JAVASCRIPT & GEMINI AI LOGIC -->
     <script>
-        // ==========================================
-        // 🔑 APNI GEMINI API KEY YAHAN PASTE KAREIN:
-        // ==========================================
-        const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";AQ.Ab8RN6Ll2jnjqpTlbbPXakcU0LmhitwtmL3zwTpZxcCqBRnQUg
+        // 🔑 Gemini API Key
+        const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";
 
         async function handleGenerateAI() {
             const promptInput = document.getElementById("aiPromptInput");
@@ -1026,19 +909,13 @@
                 return;
             }
 
-            if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_GEMINI_API_KEY_HERE") {
-                alert("Please add your Gemini API Key in line 1095 of index.html!");
-                return;
-            }
-
-            // Loading state
             btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Generating with AI...`;
             btn.disabled = true;
             resultBox.style.display = "block";
             resultText.innerHTML = "<em>✨ Gemini AI is analyzing and crafting your custom design blueprint...</em>";
 
             try {
-                const systemPrompt = "You are an expert luxury home improvement and interior design consultant for PinnacleHome. Provide actionable, stylish, high-ROI home renovation and smart home tips. Keep it concise, formatted with clear bullet points.";
+                const systemPrompt = "You are an expert luxury home improvement and interior design consultant. Provide actionable, stylish, high-ROI home renovation and design tips. Keep it concise with bullet points.";
                 const fullPrompt = `${systemPrompt}\n\nUser Question: ${query}`;
 
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
@@ -1053,18 +930,17 @@
 
                 if (data.candidates && data.candidates[0].content.parts[0].text) {
                     const rawText = data.candidates[0].content.parts[0].text;
-                    // Format markdown bold and linebreaks into clean HTML
                     const formatted = rawText
                         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                         .replace(/\n\*/g, '<br>•')
                         .replace(/\n/g, '<br>');
                     
-                    resultText.innerHTML = `<h4>💡 AI Blueprint:</h4><div style="line-height:1.7;">${formatted}</div>`;
+                    resultText.innerHTML = `<h4 style="color: #d4af37; margin-bottom: 8px;">💡 AI Blueprint:</h4><div style="line-height:1.7;">${formatted}</div>`;
                 } else {
                     resultText.innerHTML = `<span style="color: #ef4444;">Could not generate content. Please verify your API Key.</span>`;
                 }
             } catch (err) {
-                resultText.innerHTML = `<span style="color: #ef4444;">Error connecting to Gemini AI: ${err.message}</span>`;
+                resultText.innerHTML = `<span style="color: #ef4444;">Error connecting to AI: ${err.message}</span>`;
             } finally {
                 btn.innerHTML = `<i class="fa-solid fa-sparkles"></i> Generate with Gemini`;
                 btn.disabled = false;
