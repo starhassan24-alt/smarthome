@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- High Traffic SEO Meta Tags -->
-    <title>PinnacleHome | Home Improvement Ideas, Smart Living & Modern Renovation</title>
-    <meta name="description" content="Discover 10 transformative home improvement ideas, smart home upgrades, budget kitchen makeovers, and high-ROI renovation tips for modern living.">
-    <meta name="keywords" content="Home Improvement Ideas, smart home upgrades, budget kitchen remodel, modern renovation 2026, energy efficient home, interior design">
+    <title>PinnacleHome | Home Improvement Ideas & AI Renovation Assistant</title>
+    <meta name="description" content="Discover 10 transformative home improvement ideas, smart home upgrades, and generate custom design plans with our Gemini AI Renovation Assistant.">
+    <meta name="keywords" content="Home Improvement Ideas, smart home upgrades, AI renovation assistant, budget kitchen remodel, modern renovation 2026">
     <meta name="robots" content="index, follow">
     <meta name="author" content="PinnacleHome Editorial">
 
@@ -339,10 +339,6 @@
             transition: transform 0.6s ease;
         }
 
-        .featured-article-card:hover .article-img-wrap img {
-            transform: scale(1.04);
-        }
-
         .article-category {
             position: absolute;
             top: 20px;
@@ -411,6 +407,96 @@
             border-radius: var(--radius-sm);
             margin: 30px 0;
             color: #f3f4f6;
+        }
+
+        /* AI GENERATOR WIDGET STYLES */
+        .ai-widget {
+            background: linear-gradient(145deg, #14161d, #1c1f2a);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .ai-badge {
+            background: linear-gradient(90deg, #d4af37, #f59e0b);
+            color: #000;
+            font-weight: 800;
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .ai-input-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .ai-textarea {
+            width: 100%;
+            background: #08090b;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+            color: #fff;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            resize: vertical;
+            min-height: 70px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .ai-textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
+        .btn-ai-generate {
+            background: linear-gradient(90deg, #d4af37, #e5c158);
+            color: #000;
+            border: none;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-ai-generate:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .ai-result-card {
+            margin-top: 18px;
+            background: #08090b;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            display: none;
+            max-height: 350px;
+            overflow-y: auto;
+            color: #e2e8f0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .ai-result-card h4 {
+            color: var(--gold-primary);
+            font-family: var(--font-heading);
+            margin-bottom: 8px;
         }
 
         /* Sidebar Widgets */
@@ -505,80 +591,6 @@
             font-family: var(--font-heading);
         }
 
-        .tags-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .tag {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            color: #93c5fd;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .tag:hover {
-            background: var(--gold-primary);
-            color: #000;
-        }
-
-        .input-dark {
-            width: 100%;
-            background: #08090b;
-            border: 1px solid var(--border-color);
-            padding: 12px 14px;
-            border-radius: var(--radius-sm);
-            color: #fff;
-            margin-bottom: 12px;
-            outline: none;
-        }
-
-        /* Modal Overlays */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.88);
-            backdrop-filter: blur(10px);
-            z-index: 3000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-gold);
-            border-radius: var(--radius-md);
-            max-width: 750px;
-            width: 100%;
-            max-height: 85vh;
-            overflow-y: auto;
-            position: relative;
-            padding: 36px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.8);
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 18px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            color: #fff;
-            font-size: 1.8rem;
-            cursor: pointer;
-        }
-
         /* Footer */
         .site-footer {
             background-color: #07080a;
@@ -653,7 +665,7 @@
     <!-- Top Announcement Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <span><i class="fa-solid fa-bolt text-gold"></i> <strong>Trending 2026:</strong> 10 High-ROI Home Improvement Ideas to Upgrade Your Living Space</span>
+            <span><i class="fa-solid fa-bolt text-gold"></i> <strong>Trending 2026:</strong> 10 High-ROI Home Improvement Ideas + AI Renovation Assistant</span>
             <div class="top-socials">
                 <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -673,8 +685,9 @@
             <nav class="nav-links">
                 <a href="#featured" class="active">Featured</a>
                 <a href="#article-main">Home Improvement Ideas</a>
+                <a href="#ai-assistant" style="color: #e5c158; font-weight: 700;">✨ AI Assistant</a>
                 <a href="#tools">Cost Calculator</a>
-                <a href="#about-our-team" style="color: var(--gold-primary); font-weight: 700;">About Our Team</a>
+                <a href="#about-our-team">About Our Team</a>
             </nav>
 
             <div class="nav-actions">
@@ -682,7 +695,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="searchInput" placeholder="Search improvement ideas...">
                 </div>
-                <button class="btn-subscribe" onclick="handleSubscribeModal()">Subscribe</button>
+                <button class="btn-subscribe" onclick="alert('Welcome to PinnacleHome VIP Digest!')">Subscribe</button>
             </div>
         </div>
     </header>
@@ -836,6 +849,27 @@
             <!-- Right Sidebar: Widgets -->
             <aside class="sidebar">
                 
+                <!-- ✨ GEMINI AI RENOVATION & ARTICLE GENERATOR WIDGET ✨ -->
+                <div class="sidebar-widget ai-widget" id="ai-assistant">
+                    <span class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Powered by Gemini AI</span>
+                    <div class="widget-header">
+                        <h3>AI Renovation Assistant</h3>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Ask for custom design ideas, cost estimates, or generate a tailored home improvement plan:</p>
+                    
+                    <div class="ai-input-box">
+                        <textarea id="aiPromptInput" class="ai-textarea" placeholder="e.g. Give me 3 budget ideas to makeover a small living room with LED lights..."></textarea>
+                        <button class="btn-ai-generate" id="btnGenerateAI" onclick="handleGenerateAI()">
+                            <i class="fa-solid fa-sparkles"></i> Generate with Gemini
+                        </button>
+                    </div>
+
+                    <!-- AI Response Area -->
+                    <div class="ai-result-card" id="aiResultBox">
+                        <div id="aiResultText"></div>
+                    </div>
+                </div>
+
                 <!-- Quick ROI Estimator Widget -->
                 <div class="sidebar-widget calculator-widget" id="tools">
                     <div class="widget-header">
@@ -868,36 +902,6 @@
                     </div>
                 </div>
 
-                <!-- SEO Keywords Cloud -->
-                <div class="sidebar-widget tags-widget">
-                    <div class="widget-header">
-                        <i class="fa-solid fa-fire text-gold"></i>
-                        <h3>High-Traffic SEO Keywords</h3>
-                    </div>
-                    <div class="tags-cloud">
-                        <span class="tag">#HomeImprovementIdeas</span>
-                        <span class="tag">#SmartHomeUpgrades</span>
-                        <span class="tag">#KitchenRemodel2026</span>
-                        <span class="tag">#BathroomRenovation</span>
-                        <span class="tag">#EnergyEfficiency</span>
-                        <span class="tag">#BudgetMakeover</span>
-                        <span class="tag">#CurbAppealHacks</span>
-                    </div>
-                </div>
-
-                <!-- Newsletter Subscription Card -->
-                <div class="sidebar-widget newsletter-widget">
-                    <div class="widget-header">
-                        <i class="fa-regular fa-envelope-open-text text-gold"></i>
-                        <h3>Weekly Design Digest</h3>
-                    </div>
-                    <p>Join 30,000+ homeowners receiving high-value transformation tips every Friday.</p>
-                    <form onsubmit="handleSubscribeForm(event)">
-                        <input type="email" placeholder="Enter your email address" required class="input-dark">
-                        <button type="submit" class="btn-gold-block">Get Free Renovation Guide</button>
-                    </form>
-                </div>
-
             </aside>
         </div>
     </main>
@@ -907,7 +911,6 @@
         <div class="container">
             <div class="about-grid-box" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 45px; align-items: center;">
                 
-                <!-- Left: Professional Story -->
                 <div>
                     <span class="badge badge-gold">About Our Team</span>
                     <h2 style="font-family: var(--font-heading); font-size: 2.3rem; margin: 12px 0 16px; line-height: 1.25; color: #fff;">
@@ -915,76 +918,33 @@
                     </h2>
                     
                     <p style="color: #e2e8f0; font-size: 1.02rem; line-height: 1.75; margin-bottom: 16px;">
-                        At <strong>PinnacleHome</strong>, our team is passionate about modern home improvement, interior design, architecture, and smart living. We bring together creative ideas, practical knowledge, and carefully researched insights to help homeowners make confident decisions for their homes.
+                        At <strong>PinnacleHome</strong>, our team is passionate about modern home improvement, interior design, architecture, and smart living.
                     </p>
 
                     <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
-                        We believe a great home should be comfortable, functional, and designed around the way you live. Our team continuously researches the latest home design trends, renovation ideas, materials, and smart-home innovations.
+                        We believe a great home should be comfortable, functional, and designed around the way you live.
                     </p>
-
-                    <div style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 16px 20px; border-radius: var(--radius-sm);">
-                        <strong style="color: var(--gold-primary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; display: block; margin-bottom: 4px;">
-                            <i class="fa-solid fa-bullseye" style="margin-right: 6px;"></i> Our Mission
-                        </strong>
-                        <p style="color: #f3f4f6; font-size: 0.95rem; line-height: 1.6; margin: 0;">
-                            To inspire homeowners with reliable ideas, modern design inspiration, and practical home improvement guidance.
-                        </p>
-                    </div>
                 </div>
 
-                <!-- Right: Contact Card -->
                 <div style="background: var(--bg-card); padding: 35px; border-radius: var(--radius-md); border: 1px solid var(--border-gold); box-shadow: var(--shadow);">
                     <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--gold-primary);">Connect With Editorial Team</span>
                     <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin: 10px 0; color: #fff;">
                         Work With Us / Inquiries
                     </h3>
                     <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 22px;">
-                        Have a design consultation inquiry, sponsorship proposal, guest editorial idea, or general question for our team? Reach out directly via email:
+                        Have an inquiry or proposal? Email us directly:
                     </p>
 
-                    <div style="background: #0d0e12; border: 1px dashed var(--gold-primary); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fa-solid fa-envelope" style="font-size: 1.8rem; color: var(--gold-primary);"></i>
-                        <div>
-                            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block;">Official Editorial Email</span>
-                            <a href="mailto:smarthomep123@gmail.com" style="color: #fff; font-size: 1.05rem; font-weight: 700; text-decoration: none; word-break: break-all;">
-                                smarthomep123@gmail.com
-                            </a>
-                        </div>
+                    <div style="background: #0d0e12; border: 1px dashed var(--gold-primary); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 20px;">
+                        <a href="mailto:smarthomep123@gmail.com" style="color: #fff; font-size: 1.05rem; font-weight: 700; text-decoration: none;">
+                            smarthomep123@gmail.com
+                        </a>
                     </div>
-
-                    <a href="mailto:smarthomep123@gmail.com?subject=Inquiry%20for%20PinnacleHome%20Editorial%20Team" style="display: block; width: 100%; text-align: center; background: var(--gold-primary); color: #000; padding: 12px; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.95rem; text-decoration: none;">
-                        <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Send Message on Gmail
-                    </a>
                 </div>
 
             </div>
         </div>
     </section>
-
-    <!-- LEGAL PRIVACY POLICY MODAL -->
-    <div class="modal-overlay" id="privacyPolicyModal">
-        <div class="modal-card">
-            <button class="close-btn" onclick="closePrivacyModal()">&times;</button>
-            
-            <span class="badge badge-gold">Legal Document</span>
-            <h2 style="font-family: var(--font-heading); font-size: 2rem; margin: 10px 0 6px; color: #fff;">Privacy Policy</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
-                <strong>Last Updated:</strong> October 2026
-            </p>
-
-            <div style="font-size: 0.95rem; line-height: 1.8; color: #d1d5db;">
-                <p>Welcome to <strong>PinnacleHome</strong>. We are committed to protecting your personal privacy across our home improvement publication.</p>
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">1. Information We Collect</h3>
-                <p>When you contact us via email, we may collect your email address (<code>smarthomep123@gmail.com</code> inquiries) and feedback you submit voluntarily.</p>
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">2. Contact Information</h3>
-                <p>Email: <a href="mailto:smarthomep123@gmail.com" style="color: var(--gold-primary);">smarthomep123@gmail.com</a></p>
-            </div>
-
-            <div style="margin-top: 25px; text-align: center;">
-                <button onclick="closePrivacyModal()" class="btn-calculate" style="max-width: 200px; padding: 10px 20px;">I Understand</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -993,47 +953,103 @@
                 <a href="#" class="logo">
                     <span class="logo-gold">PINNACLE</span>HOME
                 </a>
-                <p>The premier luxury magazine and resource for modern architecture, home improvement, interior decor, and smart home innovations.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem; color: #fff;">
-                    <i class="fa-solid fa-envelope text-gold"></i> smarthomep123@gmail.com
-                </p>
+                <p>The premier luxury magazine and resource for modern architecture, home improvement, and smart home innovations.</p>
             </div>
 
             <div class="footer-links">
-                <h4>Popular Topics</h4>
+                <h4>Topics</h4>
                 <ul>
                     <li><a href="#article-main">Smart Home Tech</a></li>
-                    <li><a href="#article-main">Kitchen Remodel Ideas</a></li>
-                    <li><a href="#article-main">Energy Efficiency</a></li>
-                    <li><a href="#article-main">Bathroom Upgrades</a></li>
+                    <li><a href="#article-main">Kitchen Remodel</a></li>
+                    <li><a href="#article-main">Energy Savings</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
-                <h4>Home Tools</h4>
+                <h4>Tools</h4>
                 <ul>
-                    <li><a href="#tools">2026 Renovation Cost Index</a></li>
+                    <li><a href="#ai-assistant">AI Renovation Tool</a></li>
                     <li><a href="#tools">ROI Calculator</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
-                <h4>Quick Navigation</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <li><a href="#about-our-team">About Our Team</a></li>
-                    <li><a href="#about-our-team">Contact via Gmail</a></li>
-                    <li><a href="javascript:void(0)" onclick="openPrivacyModal()" style="color: var(--gold-primary); font-weight: bold;">Privacy Policy</a></li>
+                    <li><a href="mailto:smarthomep123@gmail.com">smarthomep123@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom container">
-            <p>&copy; 2026 PinnacleHome Media. All rights reserved. Designed for optimal SEO and luxury home lifestyle.</p>
+            <p>&copy; 2026 PinnacleHome Media. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JAVASCRIPT & GEMINI AI LOGIC -->
     <script>
+        // ==========================================
+        // 🔑 APNI GEMINI API KEY YAHAN PASTE KAREIN:
+        // ==========================================
+        const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";AQ.Ab8RN6Ll2jnjqpTlbbPXakcU0LmhitwtmL3zwTpZxcCqBRnQUg
+
+        async function handleGenerateAI() {
+            const promptInput = document.getElementById("aiPromptInput");
+            const btn = document.getElementById("btnGenerateAI");
+            const resultBox = document.getElementById("aiResultBox");
+            const resultText = document.getElementById("aiResultText");
+
+            const query = promptInput.value.trim();
+            if (!query) {
+                alert("Please enter a question or topic first!");
+                return;
+            }
+
+            if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_GEMINI_API_KEY_HERE") {
+                alert("Please add your Gemini API Key in line 1095 of index.html!");
+                return;
+            }
+
+            // Loading state
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Generating with AI...`;
+            btn.disabled = true;
+            resultBox.style.display = "block";
+            resultText.innerHTML = "<em>✨ Gemini AI is analyzing and crafting your custom design blueprint...</em>";
+
+            try {
+                const systemPrompt = "You are an expert luxury home improvement and interior design consultant for PinnacleHome. Provide actionable, stylish, high-ROI home renovation and smart home tips. Keep it concise, formatted with clear bullet points.";
+                const fullPrompt = `${systemPrompt}\n\nUser Question: ${query}`;
+
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: fullPrompt }] }]
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.candidates && data.candidates[0].content.parts[0].text) {
+                    const rawText = data.candidates[0].content.parts[0].text;
+                    // Format markdown bold and linebreaks into clean HTML
+                    const formatted = rawText
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\n\*/g, '<br>•')
+                        .replace(/\n/g, '<br>');
+                    
+                    resultText.innerHTML = `<h4>💡 AI Blueprint:</h4><div style="line-height:1.7;">${formatted}</div>`;
+                } else {
+                    resultText.innerHTML = `<span style="color: #ef4444;">Could not generate content. Please verify your API Key.</span>`;
+                }
+            } catch (err) {
+                resultText.innerHTML = `<span style="color: #ef4444;">Error connecting to Gemini AI: ${err.message}</span>`;
+            } finally {
+                btn.innerHTML = `<i class="fa-solid fa-sparkles"></i> Generate with Gemini`;
+                btn.disabled = false;
+            }
+        }
+
         function calculateROI() {
             const rate = parseFloat(document.getElementById("projectType").value);
             const cost = parseFloat(document.getElementById("projectCost").value);
@@ -1043,29 +1059,6 @@
             }
             const valueAdded = Math.round(cost * rate);
             document.getElementById("roiValue").innerText = "$" + valueAdded.toLocaleString();
-        }
-
-        function openPrivacyModal() {
-            document.getElementById("privacyPolicyModal").style.display = "flex";
-        }
-
-        function closePrivacyModal() {
-            document.getElementById("privacyPolicyModal").style.display = "none";
-        }
-
-        window.addEventListener("click", (e) => {
-            const pModal = document.getElementById("privacyPolicyModal");
-            if (e.target === pModal) pModal.style.display = "none";
-        });
-
-        function handleSubscribeForm(e) {
-            e.preventDefault();
-            alert("Thank you! Your 2026 Home Renovation Guide is on its way.");
-        }
-
-        function handleSubscribeModal() {
-            const email = prompt("Enter your email address for luxury home & renovation tips:");
-            if (email) alert("Welcome to PinnacleHome VIP Digest!");
         }
     </script>
 </body>
