@@ -37,16 +37,8 @@
             --radius-md: 12px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background-color: var(--bg-main);
             color: var(--text-main);
@@ -88,22 +80,17 @@
             font-size: 0.82rem;
             color: var(--text-muted);
         }
-
         .top-bar-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .top-socials a {
             color: var(--text-muted);
             margin-left: 14px;
             transition: var(--transition);
         }
-
-        .top-socials a:hover {
-            color: var(--gold-primary);
-        }
+        .top-socials a:hover { color: var(--gold-primary); }
 
         /* Navigation Header */
         .navbar {
@@ -115,13 +102,11 @@
             border-bottom: 1px solid var(--border-color);
             padding: 16px 0;
         }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             text-decoration: none;
             font-family: var(--font-heading);
@@ -133,11 +118,7 @@
             flex-direction: column;
             line-height: 1.1;
         }
-
-        .logo-gold {
-            color: var(--gold-primary);
-        }
-
+        .logo-gold { color: var(--gold-primary); }
         .logo small {
             font-family: var(--font-sans);
             font-size: 0.55rem;
@@ -145,12 +126,7 @@
             color: var(--text-muted);
             margin-top: 2px;
         }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
+        .nav-links { display: flex; gap: 20px; }
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
@@ -158,18 +134,9 @@
             font-weight: 500;
             transition: var(--transition);
         }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-primary); }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--gold-primary);
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
         .search-box {
             display: flex;
             align-items: center;
@@ -179,7 +146,6 @@
             padding: 6px 14px;
             gap: 8px;
         }
-
         .search-box input {
             background: transparent;
             border: none;
@@ -201,23 +167,18 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
         .btn-subscribe:hover {
             background: var(--gold-primary);
             color: #000;
         }
 
         /* Hero Section */
-        .hero {
-            padding: 24px 0 40px 0;
-        }
-
+        .hero { padding: 24px 0 40px 0; }
         .hero-grid {
             display: grid;
             grid-template-columns: 1.8fr 1fr;
             gap: 20px;
         }
-
         .hero-main {
             border-radius: var(--radius-md);
             background-size: cover;
@@ -231,7 +192,6 @@
             box-shadow: var(--shadow);
             cursor: pointer;
         }
-
         .hero-title {
             font-family: var(--font-heading);
             font-size: 2.2rem;
@@ -239,26 +199,10 @@
             margin: 12px 0;
             font-weight: 700;
         }
+        .hero-desc { color: #d1d5db; font-size: 1rem; margin-bottom: 20px; }
+        .meta-info { display: flex; gap: 20px; font-size: 0.85rem; color: var(--text-muted); }
 
-        .hero-desc {
-            color: #d1d5db;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .meta-info {
-            display: flex;
-            gap: 20px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .hero-side {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
+        .hero-side { display: flex; flex-direction: column; gap: 20px; }
         .side-card {
             flex: 1;
             border-radius: var(--radius-md);
@@ -274,23 +218,9 @@
             text-decoration: none;
             color: #fff;
         }
-
-        .side-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--border-gold);
-        }
-
-        .side-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-            margin: 8px 0;
-            color: #fff;
-        }
-
-        .side-card p {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-        }
+        .side-card:hover { transform: translateY(-4px); border-color: var(--border-gold); }
+        .side-card h3 { font-family: var(--font-heading); font-size: 1.2rem; margin: 8px 0; color: #fff; }
+        .side-card p { font-size: 0.85rem; color: #cbd5e1; }
 
         /* Layout Grid with Sidebar */
         .layout-with-sidebar {
@@ -299,17 +229,8 @@
             gap: 36px;
             margin-top: 30px;
         }
-
-        .section-heading h2 {
-            font-family: var(--font-heading);
-            font-size: 1.85rem;
-        }
-
-        .section-heading .subtitle {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 4px 0 24px;
-        }
+        .section-heading h2 { font-family: var(--font-heading); font-size: 1.85rem; }
+        .section-heading .subtitle { color: var(--text-muted); font-size: 0.95rem; margin: 4px 0 24px; }
 
         /* Article Boxes Grid */
         .articles-cards-grid {
@@ -317,7 +238,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
-
         .article-card-box {
             background: var(--bg-card);
             border-radius: var(--radius-md);
@@ -330,43 +250,34 @@
             text-decoration: none;
             color: inherit;
         }
-
         .article-card-box:hover {
             transform: translateY(-6px);
             border-color: var(--border-gold);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
-
         .article-img-wrap {
             position: relative;
             height: 220px;
             overflow: hidden;
         }
-
         .article-img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s ease;
         }
-
-        .article-card-box:hover .article-img-wrap img {
-            transform: scale(1.08);
-        }
-
+        .article-card-box:hover .article-img-wrap img { transform: scale(1.08); }
         .article-category {
             position: absolute;
             top: 14px;
             left: 14px;
         }
-
         .article-body {
             padding: 22px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
-
         .article-body h3 {
             font-family: var(--font-heading);
             font-size: 1.25rem;
@@ -375,11 +286,7 @@
             color: #fff;
             transition: var(--transition);
         }
-
-        .article-card-box:hover .article-body h3 {
-            color: var(--gold-primary);
-        }
-
+        .article-card-box:hover .article-body h3 { color: var(--gold-primary); }
         .article-body p {
             font-size: 0.9rem;
             color: var(--text-muted);
@@ -387,7 +294,6 @@
             margin-bottom: 18px;
             flex-grow: 1;
         }
-
         .article-footer {
             display: flex;
             justify-content: space-between;
@@ -397,7 +303,6 @@
             font-size: 0.8rem;
             color: var(--text-muted);
         }
-
         .btn-read-more {
             color: var(--gold-primary);
             font-weight: 600;
@@ -414,7 +319,6 @@
             padding: 26px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
         .ai-badge {
             background: linear-gradient(90deg, #d4af37, #f59e0b);
             color: #000;
@@ -427,7 +331,6 @@
             display: inline-block;
             margin-bottom: 8px;
         }
-
         .ai-textarea {
             width: 100%;
             background: #08090b;
@@ -442,11 +345,7 @@
             margin: 10px 0;
             transition: var(--transition);
         }
-
-        .ai-textarea:focus {
-            border-color: var(--gold-primary);
-        }
-
+        .ai-textarea:focus { border-color: var(--gold-primary); }
         .btn-ai-generate {
             width: 100%;
             background: linear-gradient(90deg, #d4af37, #e5c158);
@@ -463,12 +362,7 @@
             justify-content: center;
             gap: 8px;
         }
-
-        .btn-ai-generate:hover {
-            opacity: 0.95;
-            transform: translateY(-1px);
-        }
-
+        .btn-ai-generate:hover { opacity: 0.95; transform: translateY(-1px); }
         .ai-result-card {
             margin-top: 16px;
             background: #08090b;
@@ -484,41 +378,22 @@
         }
 
         /* Sidebar Widgets */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
+        .sidebar { display: flex; flex-direction: column; gap: 28px; }
         .sidebar-widget {
             background: var(--bg-card);
             border-radius: var(--radius-md);
             padding: 24px;
             border: 1px solid var(--border-color);
         }
-
         .widget-header {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 8px;
         }
-
-        .widget-header h3 {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-        }
-
-        .calculator-widget p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .calc-group {
-            margin-bottom: 14px;
-        }
-
+        .widget-header h3 { font-family: var(--font-heading); font-size: 1.2rem; }
+        .calculator-widget p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; }
+        .calc-group { margin-bottom: 14px; }
         .calc-group label {
             display: block;
             font-size: 0.82rem;
@@ -526,9 +401,7 @@
             color: #e5e7eb;
             margin-bottom: 6px;
         }
-
-        .calc-group select,
-        .calc-group input {
+        .calc-group select, .calc-group input {
             width: 100%;
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -538,7 +411,6 @@
             font-size: 0.9rem;
             outline: none;
         }
-
         .btn-calculate {
             width: 100%;
             background: var(--gold-primary);
@@ -551,11 +423,7 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
-        .btn-calculate:hover {
-            background: var(--gold-hover);
-        }
-
+        .btn-calculate:hover { background: var(--gold-hover); }
         .calc-result {
             margin-top: 16px;
             background: rgba(212, 175, 55, 0.1);
@@ -566,11 +434,48 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .calc-result strong {
             font-size: 1.3rem;
             color: var(--gold-primary);
             font-family: var(--font-heading);
+        }
+
+        /* PRIVACY POLICY MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(10px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-md);
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 38px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+        }
+        .close-btn {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
         }
 
         /* Footer */
@@ -580,44 +485,23 @@
             padding: 60px 0 25px;
             margin-top: 60px;
         }
-
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
             gap: 40px;
             margin-bottom: 40px;
         }
-
-        .footer-brand p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin: 16px 0;
-        }
-
-        .footer-links h4 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 10px;
-        }
-
+        .footer-brand p { font-size: 0.88rem; color: var(--text-muted); margin: 16px 0; }
+        .footer-links h4 { font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 18px; }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li { margin-bottom: 10px; }
         .footer-links ul li a {
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.88rem;
+            cursor: pointer;
         }
-
-        .footer-links ul li a:hover {
-            color: var(--gold-primary);
-        }
-
+        .footer-links ul li a:hover { color: var(--gold-primary); }
         .footer-bottom {
             border-top: 1px solid var(--border-color);
             padding-top: 20px;
@@ -627,17 +511,10 @@
         }
 
         @media (max-width: 992px) {
-            .hero-grid, .layout-with-sidebar, .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .articles-cards-grid {
-                grid-template-columns: 1fr;
-            }
-            .about-grid-box {
-                grid-template-columns: 1fr !important;
-            }
+            .hero-grid, .layout-with-sidebar, .footer-grid { grid-template-columns: 1fr; }
+            .articles-cards-grid { grid-template-columns: 1fr; }
+            .about-grid-box { grid-template-columns: 1fr !important; }
         }
-
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero-title { font-size: 1.6rem; }
@@ -670,8 +547,8 @@
                 <a href="/" class="active">Featured</a>
                 <a href="home-improvement-ideas.html">Home Improvement Ideas</a>
                 <a href="small-living-room-ideas.html">Small Living Room Ideas</a>
-                <a href="#tools">Cost Calculator</a>
                 <a href="#about-our-team" style="color: var(--gold-primary); font-weight: 700;">About Our Team</a>
+                <a href="javascript:void(0)" onclick="openPrivacyModal()">Privacy Policy</a>
             </nav>
 
             <div class="nav-actions">
@@ -853,6 +730,51 @@
         </div>
     </section>
 
+    <!-- ==============================================
+         PROFESSIONAL PRIVACY POLICY MODAL (UPDATED 2026)
+    ============================================== -->
+    <div class="modal-overlay" id="privacyPolicyModal">
+        <div class="modal-card">
+            <button class="close-btn" onclick="closePrivacyModal()">&times;</button>
+            
+            <span class="badge badge-gold">Legal Document</span>
+            <h2 style="font-family: var(--font-heading); font-size: 2rem; margin: 10px 0 6px; color: #fff;">Privacy Policy</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+                <strong>Last Updated:</strong> October 09, 2026
+            </p>
+
+            <div style="font-size: 0.95rem; line-height: 1.8; color: #d1d5db;">
+                <p>Welcome to <strong>PinnacleHome</strong>. Your privacy and trust are of paramount importance to us. This Privacy Policy outlines how we collect, safeguard, and use information when you visit our luxury home improvement and interior architecture publication.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">1. Information We Collect</h3>
+                <p>We may collect personal information such as your name and email address when you voluntarily contact our editorial desk via <code>smarthomep123@gmail.com</code> or subscribe to our newsletter digest.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">2. Use of Information &amp; AI Tools</h3>
+                <p>The information collected is used solely to respond to your renovation inquiries, deliver curated design editorial content, and provide custom recommendations through our Gemini AI Assistant. We do not sell or rent personal information to third parties.</p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">3. Cookies &amp; Web Analytics</h3>
+                <p>We utilize standard analytical cookies to monitor reader preferences, traffic trends, and popular home improvement categories to enhance browsing speed and user experience.</p>
+
+                <!-- PRIVACY POLICY UPDATES SECTION -->
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">4. Privacy Policy Updates</h3>
+                <p style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 14px 18px; border-radius: 4px; color: #f3f4f6;">
+                    We may update this Privacy Policy from time to time to reflect changes to our website, services, or applicable laws. Any changes will be posted on this page with an updated “Last Updated” date. We encourage visitors to review this Privacy Policy periodically.
+                </p>
+
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">5. Contact &amp; Data Rights</h3>
+                <p>If you have any questions regarding this policy or wish to exercise your data rights, please contact our privacy compliance team directly at:</p>
+                <p style="margin-top: 8px;">
+                    <i class="fa-solid fa-envelope" style="color: var(--gold-primary); margin-right: 6px;"></i> 
+                    <strong>Email:</strong> <a href="mailto:smarthomep123@gmail.com" style="color: var(--gold-primary); text-decoration: underline;">smarthomep123@gmail.com</a>
+                </p>
+            </div>
+
+            <div style="margin-top: 25px; text-align: center;">
+                <button onclick="closePrivacyModal()" class="btn-calculate" style="max-width: 200px; padding: 10px 20px;">I Understand</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -864,7 +786,7 @@
             </div>
 
             <div class="footer-links">
-                <h4>Topics</h4>
+                <h4>Trending Guides</h4>
                 <ul>
                     <li><a href="home-improvement-ideas.html">Home Improvement Ideas</a></li>
                     <li><a href="small-living-room-ideas.html">Small Living Room Ideas</a></li>
@@ -872,30 +794,32 @@
             </div>
 
             <div class="footer-links">
-                <h4>Tools</h4>
+                <h4>Interactive Tools</h4>
                 <ul>
-                    <li><a href="#ai-assistant">AI Renovation Assistant</a></li>
-                    <li><a href="#tools">ROI Calculator</a></li>
+                    <li><a href="#ai-assistant">Gemini AI Assistant</a></li>
+                    <li><a href="#tools">Renovation ROI Calculator</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
-                <h4>Contact</h4>
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="mailto:smarthomep123@gmail.com">smarthomep123@gmail.com</a></li>
+                    <li><a href="#about-our-team">About Our Team</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPrivacyModal()" style="color: var(--gold-primary); font-weight: bold;">Privacy Policy</a></li>
+                    <li><a href="mailto:smarthomep123@gmail.com">Contact via Gmail</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom container">
-            <p>&copy; 2026 PinnacleHome Media. All rights reserved.</p>
+            <p>&copy; 2026 PinnacleHome Media. All rights reserved. Designed for optimal SEO and luxury home lifestyle.</p>
         </div>
     </footer>
 
     <!-- JAVASCRIPT & GEMINI AI LOGIC -->
     <script>
         // 🔑 Gemini API Key
-        const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";AQ.Ab8RN6Ll2jnjqpTlbbPXakcU0LmhitwtmL3zwTpZxcCqBRnQUg
+        const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";
 
         async function handleGenerateAI() {
             const promptInput = document.getElementById("aiPromptInput");
@@ -957,6 +881,22 @@
             const valueAdded = Math.round(cost * rate);
             document.getElementById("roiValue").innerText = "$" + valueAdded.toLocaleString();
         }
+
+        /* Privacy Policy Modal Controls */
+        function openPrivacyModal() {
+            const modal = document.getElementById("privacyPolicyModal");
+            if (modal) modal.style.display = "flex";
+        }
+
+        function closePrivacyModal() {
+            const modal = document.getElementById("privacyPolicyModal");
+            if (modal) modal.style.display = "none";
+        }
+
+        window.addEventListener("click", (e) => {
+            const pModal = document.getElementById("privacyPolicyModal");
+            if (e.target === pModal) pModal.style.display = "none";
+        });
     </script>
 </body>
 </html>
