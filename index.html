@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- High Traffic SEO Meta Tags -->
-    <title>PinnacleHome | Luxury Home Improvement, Modern Architecture & Interior Design</title>
-    <meta name="description" content="Expert home improvement guides, budget kitchen remodels, modern luxury interior design, small bathroom renovations, and high ROI DIY home makeover tips.">
-    <meta name="keywords" content="home improvement, budget kitchen remodel, luxury interior design, modern architecture, smart home upgrades, small bathroom renovation, home makeover tips, DIY home renovation 2026, home decor ideas">
+    <title>PinnacleHome | Home Improvement Ideas, Smart Living & Modern Renovation</title>
+    <meta name="description" content="Discover 10 transformative home improvement ideas, smart home upgrades, budget kitchen makeovers, and high-ROI renovation tips for modern living.">
+    <meta name="keywords" content="Home Improvement Ideas, smart home upgrades, budget kitchen remodel, modern renovation 2026, energy efficient home, interior design">
     <meta name="robots" content="index, follow">
     <meta name="author" content="PinnacleHome Editorial">
 
@@ -233,6 +233,7 @@
             min-height: 480px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
+            cursor: pointer;
         }
 
         .hero-title {
@@ -292,43 +293,12 @@
             color: #cbd5e1;
         }
 
-        /* Filter Pills */
-        .filter-section {
-            padding: 10px 0 26px;
-        }
-
-        .filter-pills {
-            display: flex;
-            gap: 12px;
-            overflow-x: auto;
-            padding-bottom: 8px;
-        }
-
-        .pill {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            padding: 9px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: var(--transition);
-        }
-
-        .pill:hover,
-        .pill.active {
-            background: var(--gold-primary);
-            color: #0d0e12;
-            border-color: var(--gold-primary);
-        }
-
         /* Layout Grid with Sidebar */
         .layout-with-sidebar {
             display: grid;
             grid-template-columns: 2.2fr 1fr;
             gap: 36px;
+            margin-top: 30px;
         }
 
         .section-heading h2 {
@@ -342,33 +312,23 @@
             margin: 4px 0 24px;
         }
 
-        /* Article Cards */
-        .article-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .article-card {
+        /* Full Featured Article Card */
+        .featured-article-card {
             background: var(--bg-card);
             border-radius: var(--radius-md);
             overflow: hidden;
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
             transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
         }
 
-        .article-card:hover {
-            transform: translateY(-6px);
+        .featured-article-card:hover {
             border-color: var(--border-gold);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .article-img-wrap {
             position: relative;
-            height: 220px;
+            height: 380px;
             overflow: hidden;
         }
 
@@ -379,60 +339,78 @@
             transition: transform 0.6s ease;
         }
 
-        .article-card:hover .article-img-wrap img {
-            transform: scale(1.08);
+        .featured-article-card:hover .article-img-wrap img {
+            transform: scale(1.04);
         }
 
         .article-category {
             position: absolute;
-            top: 14px;
-            left: 14px;
+            top: 20px;
+            left: 20px;
         }
 
-        .article-body {
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+        .article-body-content {
+            padding: 36px;
         }
 
-        .article-body h3 {
+        .article-body-content h1 {
             font-family: var(--font-heading);
-            font-size: 1.25rem;
-            line-height: 1.4;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            line-height: 1.35;
+            margin-bottom: 16px;
             color: #fff;
-            transition: var(--transition);
         }
 
-        .article-card:hover .article-body h3 {
-            color: var(--gold-primary);
-        }
-
-        .article-body p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.55;
-            margin-bottom: 18px;
-            flex-grow: 1;
-        }
-
-        .article-footer {
+        .article-body-content .post-meta {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-color);
-            padding-top: 14px;
-            font-size: 0.8rem;
+            gap: 16px;
             color: var(--text-muted);
+            font-size: 0.88rem;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 25px;
         }
 
-        .btn-read-more {
+        .article-text {
+            color: #e2e8f0;
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+
+        .article-text p {
+            margin-bottom: 20px;
+        }
+
+        .article-text h3 {
+            font-family: var(--font-heading);
             color: var(--gold-primary);
-            font-weight: 600;
-            display: inline-flex;
+            font-size: 1.35rem;
+            margin: 32px 0 12px;
+            display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 10px;
+        }
+
+        .article-text ul {
+            margin: 12px 0 24px 24px;
+        }
+
+        .article-text li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .article-text li strong {
+            color: #fff;
+        }
+
+        .pro-callout {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 3px solid var(--gold-primary);
+            padding: 18px 22px;
+            border-radius: var(--radius-sm);
+            margin: 30px 0;
+            color: #f3f4f6;
         }
 
         /* Sidebar Widgets */
@@ -581,7 +559,7 @@
             background: var(--bg-secondary);
             border: 1px solid var(--border-gold);
             border-radius: var(--radius-md);
-            max-width: 800px;
+            max-width: 750px;
             width: 100%;
             max-height: 85vh;
             overflow-y: auto;
@@ -601,37 +579,12 @@
             cursor: pointer;
         }
 
-        .modal-content-inner img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: var(--radius-sm);
-            margin: 18px 0;
-        }
-
-        .modal-content-inner h2 {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            line-height: 1.3;
-        }
-
-        .modal-content-inner .article-full-text {
-            line-height: 1.8;
-            color: #e2e8f0;
-        }
-
-        .modal-content-inner .article-full-text h3 {
-            font-family: var(--font-heading);
-            color: var(--gold-primary);
-            margin: 20px 0 10px;
-        }
-
         /* Footer */
         .site-footer {
             background-color: #07080a;
             border-top: 1px solid var(--border-color);
             padding: 60px 0 25px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
         .footer-grid {
@@ -684,15 +637,14 @@
             .hero-grid, .layout-with-sidebar, .footer-grid {
                 grid-template-columns: 1fr;
             }
-            .about-grid-box {
-                grid-template-columns: 1fr !important;
-            }
+            .article-img-wrap { height: 260px; }
+            .about-grid-box { grid-template-columns: 1fr !important; }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .article-cards-grid { grid-template-columns: 1fr; }
             .hero-title { font-size: 1.6rem; }
+            .article-body-content { padding: 22px; }
         }
     </style>
 </head>
@@ -701,7 +653,7 @@
     <!-- Top Announcement Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
-            <span><i class="fa-solid fa-bolt text-gold"></i> <strong>Trending 2026:</strong> Top 10 High-ROI Smart Home Upgrades You Can Do This Weekend</span>
+            <span><i class="fa-solid fa-bolt text-gold"></i> <strong>Trending 2026:</strong> 10 High-ROI Home Improvement Ideas to Upgrade Your Living Space</span>
             <div class="top-socials">
                 <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -715,14 +667,12 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <span class="logo-gold">PINNACLE</span>HOME
-                <small>ESTATE & IMPROVEMENT</small>
+                <small>ESTATE &amp; IMPROVEMENT</small>
             </a>
 
             <nav class="nav-links">
                 <a href="#featured" class="active">Featured</a>
-                <a href="#articles">Articles</a>
-                <a href="#articles">Kitchen & Bath</a>
-                <a href="#articles">Interior Design</a>
+                <a href="#article-main">Home Improvement Ideas</a>
                 <a href="#tools">Cost Calculator</a>
                 <a href="#about-our-team" style="color: var(--gold-primary); font-weight: 700;">About Our Team</a>
             </nav>
@@ -730,7 +680,7 @@
             <div class="nav-actions">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="searchInput" placeholder="Search high-ROI ideas...">
+                    <input type="text" id="searchInput" placeholder="Search improvement ideas...">
                 </div>
                 <button class="btn-subscribe" onclick="handleSubscribeModal()">Subscribe</button>
             </div>
@@ -740,43 +690,29 @@
     <!-- Hero / Featured Section -->
     <section class="hero" id="featured">
         <div class="container hero-grid">
-            <div class="hero-main" style="background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');">
-                <span class="badge badge-gold">Cover Story • 2026 Trend</span>
-                <h1 class="hero-title">10 High-ROI Luxury Home Improvement Projects That Add Massive Property Value</h1>
-                <p class="hero-desc">From open-concept smart kitchen transformations to eco-luxury outdoor living spaces, learn which architectural renovations pay back up to 85% at resale.</p>
+            <div class="hero-main" style="background-image: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');" onclick="document.getElementById('article-main').scrollIntoView({behavior: 'smooth'})">
+                <span class="badge badge-gold">Cover Story • 2026 Blueprint</span>
+                <h1 class="hero-title">10 Transformative Home Improvement Ideas for Modern Living</h1>
+                <p class="hero-desc">Elevate your daily convenience, slash utility bills, and maximize property value with these proven high-ROI home renovation and smart automation ideas.</p>
                 <div class="meta-info">
-                    <span><i class="fa-regular fa-clock"></i> 8 Min Read</span>
-                    <span><i class="fa-regular fa-user"></i> By Marcus Sterling</span>
-                    <span><i class="fa-solid fa-fire text-gold"></i> 45.2K Views</span>
+                    <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+                    <span><i class="fa-regular fa-user"></i> By Pinnacle Editorial</span>
+                    <span><i class="fa-solid fa-fire text-gold"></i> 52.8K Views</span>
                 </div>
             </div>
 
             <div class="hero-side">
-                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80');">
-                    <span class="badge">Kitchen Remodeling</span>
-                    <h3>Budget Kitchen Makeover: Luxury Look Under $5,000</h3>
-                    <p>Modern quartz countertops, painted shaker cabinets & brass hardware secrets.</p>
+                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80');">
+                    <span class="badge">Kitchen Renovation</span>
+                    <h3>Modern Kitchen Refresh</h3>
+                    <p>Matte cabinet refinishing, brushed brass hardware, and under-cabinet LED task lights.</p>
                 </div>
 
-                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80');">
-                    <span class="badge">Bathroom Design</span>
-                    <h3>Spa-Inspired Small Bathroom Renovation Ideas</h3>
-                    <p>Walk-in curbless showers, floating vanities, and ambient LED backlit mirrors.</p>
+                <div class="side-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80');">
+                    <span class="badge">Smart Living</span>
+                    <h3>Smart Automation &amp; Security</h3>
+                    <p>AI thermostats, automated lighting schedules, and biometric keyless access.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Category Filter Tabs -->
-    <section class="filter-section">
-        <div class="container">
-            <div class="filter-pills" id="filterPills">
-                <button class="pill active" data-category="all">All Topics</button>
-                <button class="pill" data-category="kitchen">Kitchen Remodel</button>
-                <button class="pill" data-category="interior">Interior Trends</button>
-                <button class="pill" data-category="diy">DIY & Budget</button>
-                <button class="pill" data-category="smart-home">Smart Home Tech</button>
-                <button class="pill" data-category="outdoor">Outdoor & Patio</button>
             </div>
         </div>
     </section>
@@ -785,14 +721,116 @@
     <main class="main-content" id="articles">
         <div class="container layout-with-sidebar">
             
-            <!-- Left: Articles Grid -->
-            <div class="articles-area">
+            <!-- Left: Main Complete Article -->
+            <div class="articles-area" id="article-main">
                 <div class="section-heading">
-                    <h2>Trending Home Improvement Guides</h2>
-                    <p class="subtitle">Search-optimized blueprints for stylish, value-boosting architectural upgrades.</p>
+                    <h2>Featured Home Improvement Guide</h2>
+                    <p class="subtitle">A comprehensive blueprint for stylish, value-boosting home transformations.</p>
                 </div>
 
-                <div class="article-cards-grid" id="articlesGrid"></div>
+                <article class="featured-article-card">
+                    <div class="article-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80" alt="10 Transformative Home Improvement Ideas">
+                        <span class="badge badge-gold article-category">Home Improvement Ideas</span>
+                    </div>
+
+                    <div class="article-body-content">
+                        <h1>10 Transformative Home Improvement Ideas for a Smarter, Modern Living Space</h1>
+                        
+                        <div class="post-meta">
+                            <span><i class="fa-regular fa-calendar"></i> October 2026</span>
+                            <span>•</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+                            <span>•</span>
+                            <span><i class="fa-solid fa-tag text-gold"></i> High-ROI Renovation</span>
+                        </div>
+
+                        <div class="article-text">
+                            <p>
+                                Upgrading your home doesn’t always require a complete overhaul or an overwhelming budget. Whether you want to boost your property's resale value, cut down on monthly utility bills, or simply create a cozier and more functional environment, making strategic home improvements is the smart way forward.
+                            </p>
+                            <p>
+                                In today’s fast-paced world, blending <strong>modern aesthetic upgrades</strong> with <strong>smart home technology</strong> gives you the best of both worlds: elevated lifestyle aesthetics and effortless daily convenience. Here are the top 10 impactful home improvement ideas to transform your living space.
+                            </p>
+
+                            <h3>1. Upgrade to Smart Lighting &amp; Automated Controls</h3>
+                            <p>
+                                Lighting sets the tone for your entire home. Replacing traditional switches with smart light switches and automated LED bulbs is one of the quickest, highest-impact upgrades you can make.
+                            </p>
+                            <ul>
+                                <li><strong>Automated Schedules:</strong> Program lights to turn on gently at sunset and turn off when you leave the room.</li>
+                                <li><strong>Voice &amp; App Controls:</strong> Adjust brightness and color ambiance effortlessly with Alexa or Google Assistant.</li>
+                            </ul>
+
+                            <div class="pro-callout">
+                                💡 <strong>Pro Tip:</strong> Install motion-sensor smart switches in staircases, hallways, and closets to ensure energy is never wasted.
+                            </div>
+
+                            <h3>2. Install a Smart Thermostat for Maximum Energy Efficiency</h3>
+                            <p>
+                                Heating and cooling make up a massive chunk of household energy expenses. A smart thermostat learns your daily routine, adjusts temperatures when you're away, and optimizes comfort while you're asleep.
+                            </p>
+                            <ul>
+                                <li>Save between <strong>15% to 20%</strong> on annual heating and cooling bills.</li>
+                                <li>Control your climate remotely from your smartphone before arriving home.</li>
+                            </ul>
+
+                            <h3>3. Revitalize the Heart of the Home: Quick Kitchen Makeover</h3>
+                            <p>
+                                Kitchen remodels consistently yield one of the highest Returns on Investment (ROI). You don’t need to replace all your cabinetry to make a dramatic difference:
+                            </p>
+                            <ul>
+                                <li><strong>Paint or Refinish Cabinets:</strong> Modern shades like matte charcoal, sage green, or warm off-white breathe instant life into an outdated kitchen.</li>
+                                <li><strong>Upgrade Hardware:</strong> Swap old knobs for brushed brass or matte black fixtures.</li>
+                                <li><strong>Under-Cabinet LED Strips:</strong> Creates a warm ambient glow while doubling as task lighting for food preparation.</li>
+                            </ul>
+
+                            <h3>4. Elevate Home Security with Smart Access &amp; Monitoring</h3>
+                            <p>
+                                Peace of mind is the ultimate luxury. Modern smart security systems are wireless, easy to install, and provide 24/7 visibility over your property:
+                            </p>
+                            <ul>
+                                <li><strong>Video Doorbells:</strong> Answer deliveries and see guests from anywhere in the world.</li>
+                                <li><strong>Smart Deadbolts:</strong> Keyless access using fingerprint biometric scanners, PIN codes, or proximity auto-unlock.</li>
+                            </ul>
+
+                            <h3>5. Embrace an Open Concept &amp; Multi-Functional Spaces</h3>
+                            <p>
+                                Modern living values open airflow and multifunctional rooms. Convert an unused closet or corner into an ergonomic "Cloffice" (closet office) with floating shelving and integrated cable management.
+                            </p>
+
+                            <h3>6. Refresh Your Bathroom with Spa-Like Touches</h3>
+                            <p>
+                                Transform your daily routine into a boutique hotel retreat with affordable bathroom updates:
+                            </p>
+                            <ul>
+                                <li>Install a high-pressure rainfall showerhead for instant luxury.</li>
+                                <li>Add smart anti-fog backlit LED mirrors.</li>
+                                <li>Switch to touchless, water-saving faucets.</li>
+                            </ul>
+
+                            <h3>7. Enhance Curb Appeal &amp; Outdoor Living</h3>
+                            <p>
+                                First impressions start at the curb. Paint your front door with a bold modern accent color, install solar landscape pathway lighting, and add smart weather-adaptive garden sprinklers.
+                            </p>
+
+                            <h3>8. Maximize Storage with Built-In &amp; Vertical Organizers</h3>
+                            <p>
+                                Clutter is the enemy of a peaceful home. Floating wall shelves, pull-out pantry organizers, and entryway benches with hidden storage create the illusion of a much larger space.
+                            </p>
+
+                            <h3>9. Upgrade Windows, Insulation &amp; Motorized Treatments</h3>
+                            <p>
+                                Smart motorized blinds scheduled to close during peak afternoon sun preserve indoor temperatures naturally and keep cooling costs low.
+                            </p>
+
+                            <h3>10. Introduce Indoor Greenery &amp; Biophilic Design</h3>
+                            <p>
+                                Bring nature indoors with air-purifying plants like Snake Plants, Monstera, and Peace Lilies paired with self-watering smart planters.
+                            </p>
+                        </div>
+                    </div>
+                </article>
             </div>
 
             <!-- Right Sidebar: Widgets -->
@@ -812,8 +850,8 @@
                             <option value="0.82">Minor Kitchen Remodel (82% ROI)</option>
                             <option value="0.74">Bathroom Makeover (74% ROI)</option>
                             <option value="0.95">Hardwood Flooring Refinish (95% ROI)</option>
-                            <option value="0.88">Outdoor Deck & Patio Addition (88% ROI)</option>
-                            <option value="0.68">Smart Home Solar & HVAC (68% ROI)</option>
+                            <option value="0.88">Outdoor Deck &amp; Patio Addition (88% ROI)</option>
+                            <option value="0.68">Smart Home Solar &amp; HVAC (68% ROI)</option>
                         </select>
                     </div>
 
@@ -828,62 +866,7 @@
                         <span>Expected Resale Value Added:</span>
                         <strong id="roiValue">$6,560</strong>
                     </div>
-                </div><!-- ================= START: NEW ARTICLE SECTION ================= -->
-<section id="home-improvement-ideas" style="padding: 60px 20px; background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <div style="max-width: 900px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-    
-    <span style="display: inline-block; background: #eff6ff; color: #2563eb; font-weight: 700; font-size: 12px; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px;">
-      Home Renovation &amp; Smart Living
-    </span>
-    
-    <h2 style="font-size: 30px; font-weight: 800; color: #0f172a; line-height: 1.3; margin-bottom: 12px;">
-      10 Transformative Home Improvement Ideas for Modern Living
-    </h2>
-    
-    <div style="display: flex; gap: 15px; color: #64748b; font-size: 14px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e2e8f0;">
-      <span>📅 October 2026</span>
-      <span>•</span>
-      <span>⏱️ 5 Min Read</span>
-      <span>•</span>
-      <span>✍️ SmartHome Team</span>
-    </div>
-
-    <p style="font-size: 16px; line-height: 1.8; color: #334155; margin-bottom: 20px;">
-      Upgrading your home doesn't always require an overwhelming budget. By blending modern aesthetics with smart automation, you can significantly elevate your daily convenience, improve energy efficiency, and boost your home’s resale value.
-    </p>
-
-    <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 30px 0 10px;">1. Upgrade to Smart Lighting &amp; Automated Controls</h3>
-    <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
-      Replacing traditional light switches with smart automated switches and LED bulbs allows you to schedule lighting, create custom moods, and control ambiance effortlessly via voice assistants or smartphones.
-    </p>
-
-    <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 30px 0 10px;">2. Install a Smart Thermostat</h3>
-    <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
-      Heating and cooling make up a massive portion of energy bills. A smart thermostat learns your family's routine and cuts energy waste by up to 15–20% automatically.
-    </p>
-
-    <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 30px 0 10px;">3. Quick Kitchen Refresh</h3>
-    <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
-      Minor kitchen improvements deliver high ROI. Repainting cabinets in modern matte neutrals, installing modern hardware pulls, and adding under-cabinet LED light strips create an instant luxury feel.
-    </p>
-
-    <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 30px 0 10px;">4. Elevate Security with Keyless Access &amp; Video Doorbells</h3>
-    <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
-      Enjoy seamless entry with biometric or PIN-code smart door locks and monitor deliveries in real-time from anywhere in the world using HD video doorbells.
-    </p>
-
-    <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin: 30px 0 10px;">5. Refresh Bathrooms with Spa-Like Touches</h3>
-    <p style="font-size: 15px; line-height: 1.7; color: #475569; margin-bottom: 15px;">
-      Simple upgrades like high-pressure rainfall showerheads, anti-fog backlit LED mirrors, and touchless water-saving faucets bring boutique hotel luxury to your daily routine.
-    </p>
-
-    <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 15px 20px; border-radius: 0 8px 8px 0; margin: 25px 0; font-size: 15px; color: #166534;">
-      💡 <strong>Pro Tip:</strong> Start with 1 or 2 high-impact upgrades (like smart lighting or a smart thermostat) to see immediate cost savings before taking on larger renovations.
-    </div>
-
-  </div>
-</section>
-<!-- ================= END: NEW ARTICLE SECTION ================= -->
+                </div>
 
                 <!-- SEO Keywords Cloud -->
                 <div class="sidebar-widget tags-widget">
@@ -892,16 +875,13 @@
                         <h3>High-Traffic SEO Keywords</h3>
                     </div>
                     <div class="tags-cloud">
+                        <span class="tag">#HomeImprovementIdeas</span>
+                        <span class="tag">#SmartHomeUpgrades</span>
                         <span class="tag">#KitchenRemodel2026</span>
-                        <span class="tag">#HomeDecorIdeas</span>
-                        <span class="tag">#SmallBathroomHacks</span>
-                        <span class="tag">#LuxuryLivingRoom</span>
-                        <span class="tag">#ModernFarmhouse</span>
-                        <span class="tag">#DIYFlooring</span>
-                        <span class="tag">#CurbAppealIdeas</span>
-                        <span class="tag">#SmartThermostat</span>
-                        <span class="tag">#MinimalistInterior</span>
-                        <span class="tag">#LowCostHomeDecor</span>
+                        <span class="tag">#BathroomRenovation</span>
+                        <span class="tag">#EnergyEfficiency</span>
+                        <span class="tag">#BudgetMakeover</span>
+                        <span class="tag">#CurbAppealHacks</span>
                     </div>
                 </div>
 
@@ -922,33 +902,26 @@
         </div>
     </main>
 
-    <!-- ==============================================
-         ABOUT OUR TEAM & MISSION SECTION (PROFESSIONAL 2026)
-    ============================================== -->
-    <section class="about-contact-section" id="about-our-team" style="padding: 80px 0; background: #111319; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-top: 50px;">
+    <!-- ABOUT OUR TEAM & MISSION SECTION -->
+    <section class="about-contact-section" id="about-our-team" style="padding: 80px 0; background: #111319; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-top: 60px;">
         <div class="container">
             <div class="about-grid-box" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 45px; align-items: center;">
                 
-                <!-- Left: Professional About Our Team Story -->
+                <!-- Left: Professional Story -->
                 <div>
                     <span class="badge badge-gold">About Our Team</span>
                     <h2 style="font-family: var(--font-heading); font-size: 2.3rem; margin: 12px 0 16px; line-height: 1.25; color: #fff;">
-                        Passionate About Better Homes & Better Living
+                        Passionate About Better Homes &amp; Better Living
                     </h2>
                     
                     <p style="color: #e2e8f0; font-size: 1.02rem; line-height: 1.75; margin-bottom: 16px;">
                         At <strong>PinnacleHome</strong>, our team is passionate about modern home improvement, interior design, architecture, and smart living. We bring together creative ideas, practical knowledge, and carefully researched insights to help homeowners make confident decisions for their homes.
                     </p>
 
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">
-                        From stylish interior updates and kitchen renovations to smart home solutions, outdoor spaces, and property improvement ideas, our goal is to make home improvement easier, more inspiring, and more accessible.
-                    </p>
-
                     <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
-                        We believe a great home is more than just beautiful — it should be comfortable, functional, and designed around the way you live. Our team continuously researches the latest home design trends, renovation ideas, materials, and smart-home innovations so our readers can discover practical ideas that add both style and value to their living spaces.
+                        We believe a great home should be comfortable, functional, and designed around the way you live. Our team continuously researches the latest home design trends, renovation ideas, materials, and smart-home innovations.
                     </p>
 
-                    <!-- Mission Statement Callout Box -->
                     <div style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 16px 20px; border-radius: var(--radius-sm);">
                         <strong style="color: var(--gold-primary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; display: block; margin-bottom: 4px;">
                             <i class="fa-solid fa-bullseye" style="margin-right: 6px;"></i> Our Mission
@@ -959,7 +932,7 @@
                     </div>
                 </div>
 
-                <!-- Right: Direct Gmail Contact Card -->
+                <!-- Right: Contact Card -->
                 <div style="background: var(--bg-card); padding: 35px; border-radius: var(--radius-md); border: 1px solid var(--border-gold); box-shadow: var(--shadow);">
                     <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--gold-primary);">Connect With Editorial Team</span>
                     <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin: 10px 0; color: #fff;">
@@ -969,7 +942,6 @@
                         Have a design consultation inquiry, sponsorship proposal, guest editorial idea, or general question for our team? Reach out directly via email:
                     </p>
 
-                    <!-- Direct Gmail Box -->
                     <div style="background: #0d0e12; border: 1px dashed var(--gold-primary); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
                         <i class="fa-solid fa-envelope" style="font-size: 1.8rem; color: var(--gold-primary);"></i>
                         <div>
@@ -980,65 +952,32 @@
                         </div>
                     </div>
 
-                    <!-- Direct Send Email Button -->
                     <a href="mailto:smarthomep123@gmail.com?subject=Inquiry%20for%20PinnacleHome%20Editorial%20Team" style="display: block; width: 100%; text-align: center; background: var(--gold-primary); color: #000; padding: 12px; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.95rem; text-decoration: none;">
                         <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Send Message on Gmail
                     </a>
-                    
-                    <p style="text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 14px;">
-                        <i class="fa-solid fa-clock text-gold"></i> Typical response time: Within 24 hours
-                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Modal for Reading Full Article -->
-    <div class="modal-overlay" id="articleModal">
-        <div class="modal-card">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
-    <!-- ==============================================
-         LEGAL PRIVACY POLICY MODAL (UPDATED 2026)
-    ============================================== -->
+    <!-- LEGAL PRIVACY POLICY MODAL -->
     <div class="modal-overlay" id="privacyPolicyModal">
-        <div class="modal-card" style="max-width: 750px;">
+        <div class="modal-card">
             <button class="close-btn" onclick="closePrivacyModal()">&times;</button>
             
             <span class="badge badge-gold">Legal Document</span>
             <h2 style="font-family: var(--font-heading); font-size: 2rem; margin: 10px 0 6px; color: #fff;">Privacy Policy</h2>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
-                <strong>Last Updated:</strong> October 07, 2026
+                <strong>Last Updated:</strong> October 2026
             </p>
 
             <div style="font-size: 0.95rem; line-height: 1.8; color: #d1d5db;">
-                <p>Welcome to <strong>PinnacleHome</strong>. We are committed to protecting your personal privacy and providing a secure online browsing experience across our luxury architecture and home improvement publication.</p>
-
+                <p>Welcome to <strong>PinnacleHome</strong>. We are committed to protecting your personal privacy across our home improvement publication.</p>
                 <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">1. Information We Collect</h3>
-                <p>When you subscribe to our newsletter or contact us via email, we may collect your name, email address (<code>smarthomep123@gmail.com</code> inquiries), and any feedback you submit voluntarily.</p>
-
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">2. How We Use Your Information</h3>
-                <p>We use collected data solely to respond to your home renovation inquiries, deliver curated home design newsletters, and enhance overall website performance and user experience.</p>
-
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">3. Cookies & Analytical Data</h3>
-                <p>We may use standard web cookies to analyze site traffic, monitor popular article trends, and understand audience demographics to improve our design editorial content.</p>
-
-                <!-- PRIVACY POLICY UPDATES SECTION -->
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">4. Privacy Policy Updates</h3>
-                <p style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 14px; border-radius: 4px; color: #f3f4f6;">
-                    We may update this Privacy Policy from time to time to reflect changes to our website, services, or applicable laws. Any changes will be posted on this page with an updated “Last Updated” date. We encourage visitors to review this Privacy Policy periodically.
-                </p>
-
-                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">5. Contact Information</h3>
-                <p>If you have any questions, privacy concerns, or data requests regarding this policy, please reach us directly at:</p>
-                <p style="margin-top: 8px;">
-                    <i class="fa-solid fa-envelope text-gold"></i> 
-                    <strong>Email:</strong> <a href="mailto:smarthomep123@gmail.com" style="color: var(--gold-primary); text-decoration: underline; margin-left: 6px;">smarthomep123@gmail.com</a>
-                </p>
+                <p>When you contact us via email, we may collect your email address (<code>smarthomep123@gmail.com</code> inquiries) and feedback you submit voluntarily.</p>
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.25rem; margin: 20px 0 8px;">2. Contact Information</h3>
+                <p>Email: <a href="mailto:smarthomep123@gmail.com" style="color: var(--gold-primary);">smarthomep123@gmail.com</a></p>
             </div>
 
             <div style="margin-top: 25px; text-align: center;">
@@ -1054,29 +993,27 @@
                 <a href="#" class="logo">
                     <span class="logo-gold">PINNACLE</span>HOME
                 </a>
-                <p>The premier luxury magazine and resource for modern architecture, home improvement, interior decor, and real estate market trends.</p>
+                <p>The premier luxury magazine and resource for modern architecture, home improvement, interior decor, and smart home innovations.</p>
                 <p style="margin-top: 10px; font-size: 0.9rem; color: #fff;">
                     <i class="fa-solid fa-envelope text-gold"></i> smarthomep123@gmail.com
                 </p>
             </div>
 
             <div class="footer-links">
-                <h4>Popular Categories</h4>
+                <h4>Popular Topics</h4>
                 <ul>
-                    <li><a href="#articles">Kitchen & Dining Renovations</a></li>
-                    <li><a href="#articles">Modern Living Room Aesthetics</a></li>
-                    <li><a href="#articles">Master Suite & Luxury Bathrooms</a></li>
-                    <li><a href="#articles">Outdoor Patios & Landscaping</a></li>
+                    <li><a href="#article-main">Smart Home Tech</a></li>
+                    <li><a href="#article-main">Kitchen Remodel Ideas</a></li>
+                    <li><a href="#article-main">Energy Efficiency</a></li>
+                    <li><a href="#article-main">Bathroom Upgrades</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
-                <h4>Home Guides</h4>
+                <h4>Home Tools</h4>
                 <ul>
                     <li><a href="#tools">2026 Renovation Cost Index</a></li>
-                    <li><a href="#articles">DIY vs Contractor Guide</a></li>
-                    <li><a href="#articles">Best Paint Colors for Resale</a></li>
-                    <li><a href="#articles">Eco-Friendly Materials</a></li>
+                    <li><a href="#tools">ROI Calculator</a></li>
                 </ul>
             </div>
 
@@ -1086,7 +1023,6 @@
                     <li><a href="#about-our-team">About Our Team</a></li>
                     <li><a href="#about-our-team">Contact via Gmail</a></li>
                     <li><a href="javascript:void(0)" onclick="openPrivacyModal()" style="color: var(--gold-primary); font-weight: bold;">Privacy Policy</a></li>
-                    <li><a href="#about-our-team">Brand Collaborations</a></li>
                 </ul>
             </div>
         </div>
@@ -1096,244 +1032,8 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT ARTICLES & LOGIC -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        const articlesData = [
-            {
-                id: 1,
-                title: "Budget Kitchen Remodel: 7 Smart Secrets for a High-End Luxury Look",
-                category: "kitchen",
-                categoryLabel: "Kitchen Remodel",
-                readTime: "6 Min Read",
-                image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-                snippet: "Transform dull cabinets, swap modern brushed brass hardware, and install faux-quartz countertops without spending more than $4,000.",
-                seoKeywords: ["kitchen remodel on a budget", "luxury kitchen ideas", "cabinet makeover", "quartz countertops ROI"],
-                content: `
-                    <p>Remodeling a kitchen is statistically proven to yield between <strong>75% to 85% Return on Investment (ROI)</strong>. Spending $50,000 on custom cabinetry is unnecessary when strategic design updates can achieve a breathtaking architectural aesthetic.</p>
-                    <h3>1. Paint Shaker Cabinets with Moody Modern Neutrals</h3>
-                    <p>Instead of replacing wooden cabinets, sand them down and apply satin-finish dark olive green, warm charcoal, or off-white taupe. Pairing these tones with satin brass handles elevates the entire perimeter.</p>
-                    <h3>2. Calacatta Quartz Waterfall Islands</h3>
-                    <p>A waterfall countertop instantly anchors the kitchen into high luxury territory. Quartz is non-porous, stain-resistant, and maintains resale value much higher than traditional granite.</p>
-                    <h3>3. Under-Cabinet Layered LED Lighting (3000K Warmth)</h3>
-                    <p>Lighting is the unsung hero of interior architecture. Dimmable warm LED strips under floating shelves and upper cabinets eliminate shadows and add dramatic depth.</p>
-                `
-            },
-            {
-                id: 2,
-                title: "Small Bathroom Renovation: 5 High-Impact Upgrades for Tight Spaces",
-                category: "interior",
-                categoryLabel: "Bathroom Design",
-                readTime: "5 Min Read",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
-                snippet: "Curbless walk-in showers, vertical fluted tiles, and floating vanities maximize square footage and bring five-star hotel vibes.",
-                seoKeywords: ["small bathroom remodel", "walk-in shower ideas", "floating vanity", "modern bathroom 2026"],
-                content: `
-                    <p>A compact bathroom doesn't mean compromising on spa-level opulence. With smart architectural tweaks, a 40 sq ft powder room can feel expansive.</p>
-                    <h3>1. Continuous Flooring with Frameless Glass Showers</h3>
-                    <p>Eliminating the shower curb and extending the same floor tile seamlessly into the shower enclosure tricks the eye into perceiving double the floor area.</p>
-                    <h3>2. Wall-Mounted Floating Vanities</h3>
-                    <p>Exposing open floor underneath the vanity creates an airy feeling. Add an LED glow strip underneath for night navigation and boutique ambiance.</p>
-                    <h3>3. Vertical Stacking of Subway or Zellige Tiles</h3>
-                    <p>Laying tiles vertically draws the eye upward toward the ceiling, creating the illusion of taller walls and grander proportions.</p>
-                `
-            },
-            {
-                id: 3,
-                title: "2026 Luxury Living Room Trends: Warm Minimalism & Organic Textures",
-                category: "interior",
-                categoryLabel: "Interior Trends",
-                readTime: "7 Min Read",
-                image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-                snippet: "Say goodbye to sterile grey aesthetics. Discover why warm bouclé fabrics, travertine coffee tables, and curved arches rule 2026 decor.",
-                seoKeywords: ["living room decor trends 2026", "warm minimalism", "travertine furniture", "luxury home styling"],
-                content: `
-                    <p>Interior design in 2026 focuses on sensory tranquility—blending earthy stone textures, unlacquered metals, and bespoke sculptural furniture.</p>
-                    <h3>1. The Return of Earth Tones and Warm Sand Palettes</h3>
-                    <p>Cool greys have been replaced by rich terracotta, muted sage, beige travertine, and warm linen drapes that soften natural sunlight.</p>
-                    <h3>2. Curved Architectural Arches & Fluted Wood Accents</h3>
-                    <p>Sharp rectangular edges are giving way to gentle arches in doorways and custom built-in entertainment consoles crafted from fluted white oak.</p>
-                `
-            },
-            {
-                id: 4,
-                title: "Smart Home Energy Upgrades That Pay For Themselves in 2 Years",
-                category: "smart-home",
-                categoryLabel: "Smart Home Tech",
-                readTime: "6 Min Read",
-                image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-                snippet: "Smart thermostats, smart breaker panels, and automated motorized shades cut utility bills by up to 30% while future-proofing your estate.",
-                seoKeywords: ["smart home upgrades", "energy efficiency tips", "smart thermostat savings", "home automation 2026"],
-                content: `
-                    <p>Smart home integration is no longer a gimmick; it is a primary selling feature for modern luxury properties looking to slash energy waste.</p>
-                    <h3>1. AI-Driven Smart Thermostats with Room Sensors</h3>
-                    <p>Systems that adjust temperatures based on actual occupancy reduce cooling and heating costs by 15-23% annually.</p>
-                    <h3>2. Motorized Solar Reflective Blinds</h3>
-                    <p>Programmed to lower during peak afternoon UV index hours, automated shades keep interiors naturally cool and protect luxury hardwood from sun fading.</p>
-                `
-            },
-            {
-                id: 5,
-                title: "DIY Hardwood & Luxury Vinyl Plank (LVP) Flooring Installation Guide",
-                category: "diy",
-                categoryLabel: "DIY & Budget",
-                readTime: "8 Min Read",
-                image: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80",
-                snippet: "A step-by-step masterclass on laying waterproof luxury vinyl plank flooring with zero squeaks and flawless transitions.",
-                seoKeywords: ["DIY flooring installation", "luxury vinyl plank LVP", "waterproof flooring guide", "hardwood floor makeover"],
-                content: `
-                    <p>Flooring transforms the visual flow of an entire house. Luxury Vinyl Plank (LVP) offers 100% waterproof protection and authentic embossed wood grain at one-third the cost of solid oak.</p>
-                    <h3>1. Subfloor Preparation is 80% of the Job</h3>
-                    <p>Ensure the subfloor is level within 3/16-inch per 10 feet. Grind down high spots and use self-leveling underlayment compound on dips.</p>
-                    <h3>2. Stagger Joints by at Least 8 Inches</h3>
-                    <p>Never create repeating 'H' patterns. Randomize plank cuts to emulate authentic natural hardwood milling.</p>
-                `
-            },
-            {
-                id: 6,
-                title: "Outdoor Living: Transform Your Backyard with Luxury Outdoor Kitchens",
-                category: "outdoor",
-                categoryLabel: "Outdoor & Patio",
-                readTime: "7 Min Read",
-                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-                snippet: "Pergolas with retractable louvers, built-in pizza ovens, and fire pits turn underutilized yards into year-round entertaining paradises.",
-                seoKeywords: ["outdoor kitchen ideas", "patio makeover", "backyard pergola", "outdoor fire pit ROI"],
-                content: `
-                    <p>Post-2020 homeowners prioritize outdoor living rooms as valuable square footage. An outdoor kitchen and covered pergola can yield up to 90% return.</p>
-                    <h3>1. Weatherproof Stainless Steel & Granite Cooking Stations</h3>
-                    <p>Incorporate marine-grade 304 stainless steel cabinetry and honed granite countertops that withstand rain, frost, and heat.</p>
-                    <h3>2. Low-Voltage Landscape Uplighting</h3>
-                    <p>Highlight architectural trees and pathway stone pavers with subtle 2700K brass spotlights for resort-quality nighttime aesthetics.</p>
-                `
-            },
-            {
-                id: 7,
-                title: "15 Brilliant Home Decor Ideas to Make Any Room Look Luxurious on a Budget",
-                category: "interior",
-                categoryLabel: "Home Decor Ideas",
-                readTime: "7 Min Read",
-                image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-                snippet: "From oversized artwork and sculptural ceramic vases to layered ambient lighting, discover 15 designer-approved home decor ideas that transform living spaces instantly.",
-                seoKeywords: ["home decor ideas", "budget home decorating", "aesthetic room decor 2026", "modern interior styling", "living room accents"],
-                content: `
-                    <p>Transforming your home into a stylish, magazine-worthy sanctuary doesn't require an expensive interior designer. By focusing on intentional textures, curated focal points, and proper scale, these <strong>proven home decor ideas</strong> will elevate your space on any budget.</p>
-                    <h3>1. The Power of Oversized Statement Wall Art</h3>
-                    <p>One common mistake in home decorating is hanging multiple tiny frames that clutter the wall. Instead, opt for a single, large-scale abstract canvas (36x48 inches or larger). A single large art piece anchors the room and immediately gives it an upscale gallery aesthetic.</p>
-                    <h3>2. Sculptural Ceramic Vases & Dry Botanical Stems</h3>
-                    <p>Swap generic glass vases for textured matte ceramic, terracotta, or travertine vessels. Fill them with tall, architectural botanicals such as dried eucalyptus or olive branches.</p>
-                    <h3>3. Hang Floor-to-Ceiling Drapes (Visual Height Trick)</h3>
-                    <p>To make ceilings appear taller and windows wider, mount your curtain rod just 2 to 3 inches below the ceiling line—not right above the window frame.</p>
-                    <h3>4. Layered 3-Tier Ambient Lighting (The 2700K Rule)</h3>
-                    <p>Never rely solely on harsh overhead ceiling lights. Create cozy luxury by layering three light sources: an overhead warm pendant fixture, a sculptural floor lamp, and warm accent backlighting.</p>
-                `
-            }
-        ];
-
-        document.addEventListener("DOMContentLoaded", () => {
-            renderArticles(articlesData);
-            setupFilterListeners();
-            setupSearchListener();
-        });
-
-        function renderArticles(list) {
-            const container = document.getElementById("articlesGrid");
-            if (!container) return;
-
-            if (list.length === 0) {
-                container.innerHTML = `<div style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--text-muted);"><h3>No articles match your search</h3><p>Try searching for "kitchen", "decor", "bathroom", "ROI", or "flooring".</p></div>`;
-                return;
-            }
-
-            container.innerHTML = list.map(item => `
-                <article class="article-card" onclick="openArticleModal(${item.id})">
-                    <div class="article-img-wrap">
-                        <img src="${item.image}" alt="${item.title}" loading="lazy">
-                        <span class="badge badge-gold article-category">${item.categoryLabel}</span>
-                    </div>
-                    <div class="article-body">
-                        <h3>${item.title}</h3>
-                        <p>${item.snippet}</p>
-                        <div class="article-footer">
-                            <span><i class="fa-regular fa-clock"></i> ${item.readTime}</span>
-                            <span class="btn-read-more">Read Guide <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
-        }
-
-        function setupFilterListeners() {
-            const pills = document.querySelectorAll(".filter-pills .pill");
-            pills.forEach(pill => {
-                pill.addEventListener("click", () => {
-                    pills.forEach(p => p.classList.remove("active"));
-                    pill.classList.add("active");
-                    const cat = pill.getAttribute("data-category");
-                    renderArticles(cat === "all" ? articlesData : articlesData.filter(a => a.category === cat));
-                });
-            });
-        }
-
-        function setupSearchListener() {
-            const searchInput = document.getElementById("searchInput");
-            if (!searchInput) return;
-            searchInput.addEventListener("input", (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                const filtered = articlesData.filter(a => 
-                    a.title.toLowerCase().includes(query) ||
-                    a.snippet.toLowerCase().includes(query) ||
-                    a.seoKeywords.some(k => k.toLowerCase().includes(query))
-                );
-                renderArticles(filtered);
-            });
-        }
-
-        function openArticleModal(id) {
-            const article = articlesData.find(a => a.id === id);
-            if (!article) return;
-            const modal = document.getElementById("articleModal");
-            const content = document.getElementById("modalContent");
-
-            content.innerHTML = `
-                <div class="modal-content-inner">
-                    <span class="badge badge-gold">${article.categoryLabel}</span>
-                    <h2>${article.title}</h2>
-                    <div class="meta-info" style="margin-bottom: 15px;">
-                        <span><i class="fa-regular fa-clock"></i> ${article.readTime}</span>
-                        <span><i class="fa-solid fa-tag text-gold"></i> High-Traffic Article</span>
-                    </div>
-                    <img src="${article.image}" alt="${article.title}">
-                    <div class="article-full-text">${article.content}</div>
-                    <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; gap: 8px; flex-wrap: wrap;">
-                        <strong style="color: var(--gold-primary); width: 100%; font-size: 0.85rem;">Ranking Keywords:</strong>
-                        ${article.seoKeywords.map(k => `<span class="tag">#${k.replace(/\\s+/g, '')}</span>`).join('')}
-                    </div>
-                </div>
-            `;
-            modal.style.display = "flex";
-        }
-
-        function closeModal() {
-            document.getElementById("articleModal").style.display = "none";
-        }
-
-        /* Privacy Policy Modal */
-        function openPrivacyModal() {
-            const modal = document.getElementById("privacyPolicyModal");
-            if (modal) modal.style.display = "flex";
-        }
-
-        function closePrivacyModal() {
-            const modal = document.getElementById("privacyPolicyModal");
-            if (modal) modal.style.display = "none";
-        }
-
-        window.addEventListener("click", (e) => {
-            const aModal = document.getElementById("articleModal");
-            const pModal = document.getElementById("privacyPolicyModal");
-            if (e.target === aModal) aModal.style.display = "none";
-            if (e.target === pModal) pModal.style.display = "none";
-        });
-
         function calculateROI() {
             const rate = parseFloat(document.getElementById("projectType").value);
             const cost = parseFloat(document.getElementById("projectCost").value);
@@ -1345,9 +1045,22 @@
             document.getElementById("roiValue").innerText = "$" + valueAdded.toLocaleString();
         }
 
+        function openPrivacyModal() {
+            document.getElementById("privacyPolicyModal").style.display = "flex";
+        }
+
+        function closePrivacyModal() {
+            document.getElementById("privacyPolicyModal").style.display = "none";
+        }
+
+        window.addEventListener("click", (e) => {
+            const pModal = document.getElementById("privacyPolicyModal");
+            if (e.target === pModal) pModal.style.display = "none";
+        });
+
         function handleSubscribeForm(e) {
             e.preventDefault();
-            alert("Thank you! Your 2026 Home Renovation & Luxury Architecture Blueprint is on its way.");
+            alert("Thank you! Your 2026 Home Renovation Guide is on its way.");
         }
 
         function handleSubscribeModal() {
